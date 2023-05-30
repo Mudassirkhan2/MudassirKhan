@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jost&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,9 +12,6 @@ body {
   box-sizing: border-box;
 }
 
-image{
-  outline: dashed 1px red;
-}
 
 html {
   scroll-behavior: smooth;

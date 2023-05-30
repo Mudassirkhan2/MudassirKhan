@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,9 +16,12 @@ module.exports = {
       colors: {
         primary: 'rgb(0 255 148)',
         secondary: 'rgba(0,255,148,.2);',
-    },
-  },
-  plugins: [],
+      },
+      fontFamily: {
+        Caveat: ['Caveat', 'ui-sans-serif', 'system-ui'],
+        ost: ['Jost', 'ui-sans-serif', 'system-ui'],
+      },
+    plugins: [],
+  }
+  }
 }
-}
-
