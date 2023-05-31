@@ -19,7 +19,8 @@ module.exports = {
       },
       fontFamily: {
         Caveat: ['Caveat', 'ui-sans-serif', 'system-ui'],
-        ost: ['Jost', 'ui-sans-serif', 'system-ui'],
+        jost: ['Jost', 'ui-sans-serif', 'system-ui'],
+        nabla: ['Nabla', 'ui-sans-serif', 'system-ui'],
       },
     plugins: [],
   }

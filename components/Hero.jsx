@@ -9,6 +9,12 @@ import { useState ,useEffect } from 'react';
 import Intro from './clients/Intro';
 
 const Hero = () => {
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+          // Scroll to top on page reload
+          window.scrollTo(0, 0);
+        }
+      }, []);
     const [animationComplete, setAnimationComplete] = useState(true);
     const [textSize, setTextSize] = useState("7rem");
     const [textSizeMobile, setTextSizeMobile] = useState("2rem");
@@ -37,6 +43,8 @@ const Hero = () => {
             setTextSizeMobile("2rem");
         }
     };
+   
+    
    
   return (
     <div className="flex flex-col relative items-center justify-center w-full h-[100vh] overflow-hidden select-none">

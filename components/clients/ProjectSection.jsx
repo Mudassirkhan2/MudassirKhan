@@ -59,27 +59,26 @@ const ProjectSection = ({ imageSrc, title, indexValue, liveLink, githubLink }) =
             variants={animationVariants1}
             transition={{ duration: 0.8 }}
           >
-            <Image src={imageSrc} width={800} height={800} alt='project' className='shadow-2xl outline-dashed outline-1 outline-primary' />
+            <Image src={imageSrc} width={800} height={800} alt='project' className='w-auto h-auto mx-auto shadow-2xl md:mx-0 outline-dashed outline-1 outline-primary' />
           </motion.div>
           <motion.div className='self-end mt-3 md:w-3/4' animate={inView ? 'visible' : 'hidden'}
             variants={animationVariants2}
             transition={{ duration: 0.8, delay: 1 }}>
-            <h3 className='mt-2 mb-3 text-5xl font-bold text-teal-500 font-Caveat'>{title}</h3>
+            <h3 className='mt-2 mb-3 text-3xl font-bold text-center text-teal-500 md:text-left md:text-5xl font-Caveat'>{title}</h3>
                 {
                         <p key={indexValue} className='self-end mb-3 font-mono text-lg'>
                             {projectsData[indexValue].description}
                             {projectsData[indexValue].techStack.map((tech, i) => (
-                            <span key={indexValue} className={`text-2xl font-bold tracking-widest ${indexValue === 0 ? 'text-pink-500' : indexValue === 1 ? 'text-yellow-500' : 'text-[#B799FF]'} font-Caveat`}>
-                                {tech}
-                                {i !== projectsData[1].techStack.length - 1 && ', '}
-                            </span>
-                            ))}
-                            , it offers features such as{' '}
-                            {projectsData[indexValue].features.map((feature, i) => (
-                            <React.Fragment key={i}>
-                                {feature}
-                                {i !== projectsData[indexValue].features.length - 1 ? ', ' : '.'}
-                            </React.Fragment>
+                                <span key={i} className={`text-2xl font-bold tracking-widest ${indexValue === 0 ? 'text-pink-500' : indexValue === 1 ? 'text-yellow-500' : 'text-[#B799FF]'} font-Caveat`}>
+                                    {tech} {i !== projectsData[indexValue].techStack.length - 1 && ', '}
+                                </span>
+                                  ))}
+
+                              , it offers features such as{projectsData[indexValue].features.map((feature, i) => (
+                               <React.Fragment key={i}>
+                                  {feature}
+                                  {i !== projectsData[indexValue].features.length - 1 ? ', ' : '.'}
+                              </React.Fragment>
                             ))}
                         </p> 
                         }

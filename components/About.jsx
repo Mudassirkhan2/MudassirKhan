@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
 import FramerIcon from '../app/assets/framer.png';
+import AnimateLetters from './clients/AnimateLetters';
 
 const About = () => {
   return (
-    <section className="max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1  outline-secondary">
-        <h2 className='my-10 text-3xl lg:text-6xl font-bold text-center select-none'> Something About Me</h2>
-        <div className='flex flex-col mt-10 gap-x-10 gap-y-10 lg:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'>
-          <div className='flex flex-col p-2 md:w-1/2 outline-dashed outline-1 outline-secondary mb-4'>
-              <h2 className='mb-6  text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
+    <section className="max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1 outline-secondary">
+        <AnimateLetters  letter='Something About Me' />
+        <div className='flex flex-col mt-10 gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'>
+          <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
+              <h2 className='mb-6 text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
               <div className='space-y-3'>
                 <p  className='font-mono text-xl'>Currently pursuing my BTech in Electrical and Electronics Engineering, I bring a unique blend of engineering and coding skills to my work. I&apos;m  passionate about creating captivating user experiences through intuitive and responsive front-end development.
                 </p>
@@ -16,16 +17,16 @@ const About = () => {
                 </p>
               </div>
           </div>
-          <div className='p-2 md:w-1/2 outline-dashed outline-1 outline-secondary mb-4 select-none'>
+          <div className='p-2 mb-4 select-none md:w-1/2 outline-dashed outline-1 outline-secondary'>
               <h2 className='mb-6 text-4xl' >Language and <span className='text-primary'> Tools</span> </h2>
-              <ul className='flex flex-wrap justify-center gap-12 md:gap-7 mb-2'>
+              <ul className='flex flex-wrap justify-center gap-12 mb-2 md:gap-7'>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                     <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                     alt="Nextjs"
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Nextjs</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Nextjs</div>
                 </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                   <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -33,7 +34,7 @@ const About = () => {
                   width={70}
                   height={70}
                   />
-                   <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">React JS</div>
+                   <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">React JS</div>
                 </li>
                 
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
@@ -42,7 +43,7 @@ const About = () => {
                   width={70}
                   height={70}
                   />
-                   <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">redux-toolkit</div>
+                   <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">redux-toolkit</div>
                 </li>
                <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                   <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" 
@@ -50,7 +51,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Tailwind CSS</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Tailwind CSS</div>
                </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                   <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
@@ -58,7 +59,7 @@ const About = () => {
                   width={70}
                   height={70}
                   />
-                   <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">JavaScript</div>
+                   <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">JavaScript</div>
                 </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                     <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
@@ -66,7 +67,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Python</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Python</div>
                 </li>
              
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
@@ -75,7 +76,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">firebase</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">firebase</div>
                 </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                     <Image src={FramerIcon}
@@ -83,7 +84,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Framer motion</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Framer motion</div>
                 </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                     <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
@@ -91,7 +92,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Figma</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Figma</div>
                 </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                     <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
@@ -99,7 +100,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold  transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Git</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Git</div>
                 </li>
                 <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                     <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
@@ -107,7 +108,7 @@ const About = () => {
                     width={70}
                     height={70}
                     />
-                     <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Github</div>
+                     <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Github</div>
                 </li>
                
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
@@ -116,7 +117,7 @@ const About = () => {
                   width={70}
                   height={70}
                   />
-                  <div class="absolute top-3/4 z-20 overflow-hidden whitespace-nowrap rounded-lg bg-primary px-2 py-1 font-bold text-base-100 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Vscode</div>
+                  <div className="absolute z-20 px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary text-base-100 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Vscode</div>
               </li>
             </ul>
           </div>

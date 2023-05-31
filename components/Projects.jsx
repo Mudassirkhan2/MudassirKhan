@@ -2,12 +2,15 @@
 import GoogleGif from '../app/assets/google.gif';
 import HomeFinderGif from '../app/assets/HomeFinder.gif';
 import liftSimulationGif from '../app/assets/liftSimulation.gif';
-
+import AnimateLetters from './clients/AnimateLetters';
 import ProjectSection from './clients/ProjectSection';
+
+
 const Projects = () => {
+  
   return (
-    <section className='max-w-6xl p-2 mx-auto mt-10 rounded-lg shadow-2xl'>
-      <h2 className='my-10 text-3xl font-bold text-center select-none lg:text-6xl'>Featured Projects</h2>
+    <section className='max-w-6xl p-2 mx-auto mt-10 overflow-hidden rounded-lg shadow-2xl md:p-4'>
+      <AnimateLetters  letter='Featured Projects' />
       <div className='flex flex-col gap-24'>
         <ProjectSection
           imageSrc={GoogleGif}
