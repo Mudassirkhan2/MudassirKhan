@@ -33,10 +33,10 @@ const NavBar = () => {
     
   return (
     <header className="fixed top-0 left-0 z-20 w-full " ref={targetRef} >
-        <motion.nav className="flex items-center justify-between w-full max-w-6xl mx-auto shadow-2xl select-none outline-dashed outline-2 outline-secondary opacity-60"
+        <motion.nav className="flex items-center justify-between w-full max-w-6xl mx-auto transition duration-500 ease-in-out shadow-2xl select-none outline-dashed outline-2 outline-secondary"
         
         style={{ 
-            backgroundColor: navbar ? '#000080' : 'transparent',
+            backgroundColor: navbar ? '#0C134F' : 'transparent',
          }}
         >
             <div className='p-2 ml-2 text-4xl cursor-pointer font-Caveat lg:ml-4'>
@@ -52,7 +52,7 @@ const NavBar = () => {
         {
                 showMediaIcons ? <RiMenuFoldLine className='absolute block text-2xl lg:hidden right-4' onClick={handleToggle}/> : " "
             }       
-        <ul className={`space-x-7  text-2xl md:text-xl bg-red-600 backdrop-blur-lg lg:opacity-100 lg:bg-transparent flex flex-col lg:items-center text-black lg:text-cyan-500 font-bold justify-center gap-5 absolute  lg:relative  lg:flex lg:p-4 lg:my-4 lg:rounded-md top-0 right-0 w-9/12 h-screen  z-40 lg:flex-row lg:h-fit lg:w-1/2  shadow-2xl outline-dashed outline-2  outline-secondary lg:backdrop-blur-none ${showMediaIcons ? "hidden" :"block"}`} >
+        <ul className={`space-x-7  text-2xl md:text-xl backdrop-blur-lg lg:opacity-100 lg:bg-transparent flex flex-col lg:items-center text-black lg:text-cyan-500 font-bold justify-center gap-5 absolute  lg:relative  lg:flex lg:p-4 lg:my-4 lg:rounded-md top-0 right-0 w-9/12 h-screen  z-50 lg:flex-row lg:h-fit lg:w-1/2  shadow-2xl outline-dashed outline-2  outline-secondary lg:backdrop-blur-none ${showMediaIcons ? "hidden" :"block"}`} >
             <GiCrossedBones className='absolute block top-4 right-4 Cross lg:hidden' onClick={()=>handleToggle()}/>
             <li className='transition duration-500 ease-in-out cursor-pointer hover:text-primary'>
                 <Link
