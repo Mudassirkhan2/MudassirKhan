@@ -52,7 +52,7 @@ const NavBar = () => {
         {
                 showMediaIcons ? <RiMenuFoldLine className='absolute block text-2xl lg:hidden right-4' onClick={handleToggle}/> : " "
             }       
-        <ul className={`space-x-7  text-2xl md:text-xl backdrop-blur-lg lg:opacity-100 lg:bg-transparent flex flex-col lg:items-center text-black lg:text-cyan-500 font-bold justify-center gap-5 absolute  lg:relative  lg:flex lg:p-4 lg:my-4 lg:rounded-md top-0 right-0 w-9/12 h-screen  z-50 lg:flex-row lg:h-fit lg:w-1/2  shadow-2xl outline-dashed outline-2  outline-secondary lg:backdrop-blur-none ${showMediaIcons ? "hidden" :"block"}`} >
+        <ul className={`space-x-7  text-2xl md:text-xl backdrop-blur-lg lg:opacity-100 lg:bg-transparent flex flex-col lg:items-center  text-cyan-500 font-bold justify-center gap-5 absolute  lg:relative  lg:flex lg:p-4 lg:my-4 lg:rounded-md top-0 right-0 w-9/12 h-screen  z-50 lg:flex-row lg:h-fit lg:w-1/2  shadow-2xl outline-dashed outline-2  outline-secondary lg:backdrop-blur-none ${showMediaIcons ? "hidden" :"block"}`} >
             <GiCrossedBones className='absolute block top-4 right-4 Cross lg:hidden' onClick={()=>handleToggle()}/>
             <li className='transition duration-500 ease-in-out cursor-pointer hover:text-primary'>
                 <Link
