@@ -10,8 +10,8 @@ import { ElementWrapper } from './clients/client';
 const Hero = () => {
     return (
     <ElementWrapper nameOfTheElement="hero">
-        <div className="flex flex-col relative items-center justify-center w-full h-[100vh] overflow-hidden select-none">
-            <div className='max-w-6xl p-2 rounded-lg shadow-2xl'>
+        <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden select-none">
+            <div className='max-w-6xl p-2 rounded-lg shadow-2xl '>
                 <div className='absolute top-[10%] cursor-pointer left-[66%]  hidden lg:block'>
                     <a href="https://github.com/Mudassirkhan2"
                         target="_blank" rel="noopener noreferrer" className="cursor-pointer "
