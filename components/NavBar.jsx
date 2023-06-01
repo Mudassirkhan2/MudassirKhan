@@ -33,10 +33,10 @@ const NavBar = () => {
     
   return (
     <header className="fixed top-0 left-0 z-20 w-full " ref={targetRef} >
-        <motion.nav className="flex items-center justify-between w-full max-w-6xl mx-auto transition duration-500 ease-in-out shadow-2xl select-none outline-dashed outline-2 outline-secondary"
+        <motion.nav className="flex items-center justify-between w-full max-w-6xl mx-auto shadow-2xl select-none outline-dashed outline-2 outline-secondary"
         
         style={{ 
-            backgroundColor: navbar ? '#0C134F' : 'transparent',
+            backgroundColor: navbar ? '#020024' : 'transparent',
          }}
         >
             <div className='p-2 ml-2 text-4xl cursor-pointer font-Caveat lg:ml-4'>
