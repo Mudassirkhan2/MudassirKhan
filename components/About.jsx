@@ -1,11 +1,13 @@
+
 import Image from 'next/image'
 import React from 'react'
 import FramerIcon from '../app/assets/framer.png';
 import AnimateLetters from './clients/AnimateLetters';
-
+import {ElementWrapper} from './clients/client';
 const About = () => {
   return (
-    <section className="max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1 outline-secondary">
+    <ElementWrapper nameOfTheElement="about">
+      <section className="max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1 outline-secondary">
         <AnimateLetters  letter='Something About Me' />
         <div className='flex flex-col mt-10 gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'>
           <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
@@ -122,8 +124,8 @@ const About = () => {
             </ul>
           </div>
         </div>
-
     </section>
+    </ElementWrapper>
   )
 }
 
