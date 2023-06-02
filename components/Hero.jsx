@@ -3,7 +3,6 @@ import gmailIcon from '../app/assets/gmail.png';
 import linkedinIcon from '../app/assets/linkedin.png';
 import twitterIcon from '../app/assets/twitter.png';
 import Image from 'next/image';
-import Intro from './clients/Intro';
 import HeroAnimation from './clients/HeroAnimation';
 import { ElementWrapper } from './clients/client';
 
@@ -68,11 +67,13 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-col w-full">
                     <HeroAnimation />
-                    <p className="mt-3 mb-8 text-2xl text-center md:text-4xl"> a
-                        <span className="text-red-500 ">  Frontend Developer  </span>From Hyderabad
+                    <p className="mt-3 mb-8 text-2xl text-center md:text-4xl "> a
+                        <span className='text-[#B799FF]'>
+                        <span className=' text-primary'> Frontend  </span><span className='transition duration-500 ease-in-out hover:text-primary'>Developer </span>
+                        </span>
+                        From Hyderabad
                     </p>
             </div>
-            <Intro />
             </div>
         </div>
     </ElementWrapper>
