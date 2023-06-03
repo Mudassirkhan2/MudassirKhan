@@ -60,7 +60,7 @@ const ProjectSection = ({ imageSrc, title, indexValue, liveLink, githubLink }) =
             transition={{ duration: 0.8 }}
           >
             <Image src={imageSrc} width={800} height={800} 
-              priority={true}
+              loading="lazy"
             alt='project' className='w-auto h-auto mx-auto shadow-2xl md:mx-0 outline-dashed outline-1 outline-primary' />
           </motion.div>
           <motion.div className='self-end mt-3 md:w-3/4' animate={inView ? 'visible' : 'hidden'}
