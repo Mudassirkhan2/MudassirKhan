@@ -42,8 +42,57 @@ const handleAnimationComplete = () => {
    
     return (
         <>
+                <motion.h1
+                  className="text-teal-300 mt-14 text-start whitespace-nowrap font-nabla md:hidden"
+                  initial={{
+                    x: "100vw",
+                    y: "20vh",
+                    fontSize: "2rem",
+                    fontFamily: "nabla",
+                    zIndex: 30,
+                  }}
+                  animate={{
+                    x: 0,
+                    y: yValue,
+                    fontSize: "2rem",
+                    fontFamily: fontFamily,
+                    zIndex: zIndex,
+                  }}
+                  transition={{ duration: transitiontime }}
+                  onAnimationComplete={handleAnimationComplete}
+              >
+                <span className="outline-text" style={{ whiteSpace: "nowrap" }}>
+                  Hello! I&apos;m
+                </span>{" "}
+                Mudassir Khan
+              </motion.h1>
+                <motion.h1
+                  className="hidden text-teal-300 mt-14 text-start whitespace-nowrap font-nabla md:block lg:hidden"
+                  initial={{
+                    x: "100vw",
+                    y: "20vh",
+                    fontSize: "3rem",
+                    fontFamily: "nabla",
+                    zIndex: 30,
+                  }}
+                  animate={{
+                    x: 0,
+                    y: yValue,
+                    fontSize: "3rem",
+                    fontFamily: fontFamily,
+                    zIndex: zIndex,
+                  }}
+                  transition={{ duration: transitiontime }}
+                  onAnimationComplete={handleAnimationComplete}
+              >
+                <span className="outline-text" style={{ whiteSpace: "nowrap" }}>
+                  Hello! I&apos;m
+                </span>{" "}
+                Mudassir Khan
+              </motion.h1>
+
                <motion.h1
-               className=" hidden text-teal-300 text-start whitespace-nowrap font-nabla md:block"
+               className="hidden text-teal-300 text-start whitespace-nowrap font-nabla lg:block"
                initial={{
                  x: "100vw",
                  y: "20vh",
@@ -66,30 +115,7 @@ const handleAnimationComplete = () => {
                </span>{" "}
                 Mudassir Khan
              </motion.h1>
-        <motion.h1
-        className=" text-teal-300 mt-14 text-start whitespace-nowrap font-nabla md:hidden"
-        initial={{
-          x: "100vw",
-          y: "20vh",
-          fontSize: "2rem",
-          fontFamily: "nabla",
-          zIndex: 30,
-        }}
-        animate={{
-          x: 0,
-          y: yValue,
-          fontSize: "2rem",
-          fontFamily: fontFamily,
-          zIndex: zIndex,
-        }}
-        transition={{ duration: transitiontime }}
-        onAnimationComplete={handleAnimationComplete}
-      >
-        <span className="outline-text" style={{ whiteSpace: "nowrap" }}>
-          Hello! I&apos;m
-        </span>{" "}
-        Mudassir Khan
-      </motion.h1>
+       
     
     </>
   );
