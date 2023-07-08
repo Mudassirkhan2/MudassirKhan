@@ -13,7 +13,7 @@ const About = () => {
           <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
               <h2 className='mb-6 text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
               <div className='space-y-3'>
-                <p  className='font-mono text-lg md:text-xl'>Currently pursuing my BTech in Electrical and Electronics Engineering, I bring a unique blend of engineering and coding skills to my work. I&apos;m  passionate about creating captivating user experiences through intuitive and responsive front-end development.
+                <p  className='font-mono text-lg md:text-xl'>Having successfully completed my studies in BTech Electrical and Electronics Engineering, I possess a distinctive combination of engineering expertise and proficient coding skills. I&apos;m  passionate about creating captivating user experiences through intuitive and responsive front-end development.
                 </p>
                 <p className='font-mono text-lg md:text-xl'>I actively contribute to the open-source community and enjoy collaborating with like-minded individuals to bring innovative ideas to life.  My tech stack includes Next.js, React, TailwindCSS, and Im always eager to learn and expand my skills.
                 </p>
