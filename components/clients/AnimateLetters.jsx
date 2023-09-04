@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
-const AnimateLetters = ({letter}) => {
+const AnimateLetters = ({ letter }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -37,27 +37,28 @@ const AnimateLetters = ({letter}) => {
   const letters = [...letter];
   return (
     <div>
-         <motion.h2
-    ref={ref}
-    initial='initial'
-    animate={inView && isMounted ? 'animate' : 'initial'}
-    variants={sentenceVariants}
-    transition={{ duration: 1 }}
-    className='my-10 text-3xl font-bold text-center select-none lg:text-6xl font-nabla'
+      <motion.h2
+        ref={ref}
+        initial='initial'
+        animate={inView && isMounted ? 'animate' : 'initial'}
+        variants={sentenceVariants}
+        transition={{ duration: 1 }}
+        className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-6xl'
 
-  >
-    {letters.map((letter, index) => (
-      <motion.span
-        key={index}
-        variants={letterVariants}
-        transition={{ duration: 0.5 ,
-          delay: index * 0.08,
-        }}
       >
-        {letter}
-      </motion.span>
-    ))}
-  </motion.h2>
+        {letters.map((letter, index) => (
+          <motion.span
+            key={index}
+            variants={letterVariants}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.08,
+            }}
+          >
+            {letter}
+          </motion.span>
+        ))}
+      </motion.h2>
     </div>
   )
 }
