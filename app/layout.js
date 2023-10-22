@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         </link>
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        <noscript><Image src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+        <noscript><Image src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="no script" referrerpolicy="no-referrer-when-downgrade" /></noscript>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
