@@ -1,4 +1,5 @@
 import HomeFinderGif from '../app/assets/HomeFinder.gif';
+import bugbounty from '../app/assets/bugbounty.png';
 import tabstacker from '../app/assets/tabstacker.png';
 import liftSimulationGif from '../app/assets/liftSimulation.gif';
 import AnimateLetters from './clients/AnimateLetters';
@@ -33,6 +34,16 @@ const Projects = () => {
 
             liveLink='https://home-finder-khan.vercel.app/'
             githubLink='https://github.com/Mudassirkhan2/HomeFinder'
+          />
+          <ProjectSection
+            imageSrc={bugbounty}
+            title='Bug Bounty Brigade 🛡️'
+            indexValue={1}
+            description='Developed a website for the cybersecurity community, aimed at providing a valuable online resource for enthusiasts, professionals, and anyone interested in the field. This project involved the use of modern web technologies, including  '
+            techStack={['Next.js', 'Tailwind CSS', 'TypeScript', 'Radix-ui']}
+            features=' it offers features where  Users can find information about upcoming cybersecurity events, workshops, and webinars. '
+            liveLink='https://www.bugbountybrigade.tech/'
+            githubLink='https://github.com/Mudassirkhan2/bug-bounty-brigade-website'
           />
           <ProjectSection
             imageSrc={liftSimulationGif}
