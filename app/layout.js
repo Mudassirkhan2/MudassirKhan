@@ -15,19 +15,8 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Mudassir Khan" />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:url" content="https://www.mudassirkhan.tech/" />
-        <meta property="og:image" content="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Mudassir_222" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="/favicon.ico" />
-        <meta name="twitter:image:alt" content={metadata.title} />
-        <meta name="twitter:creator" content="@mudassir_khan" />
         <meta name="theme-color" content="#000000" />
         <meta name="description" content={metadata.description} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
