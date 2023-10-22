@@ -1,43 +1,9 @@
-"use client"
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
-const ProjectSection = ({ imageSrc, title, indexValue, liveLink, githubLink }) => {
-  const projectsData = [
-    {
-      description: 'Google Clone is a clone of the Google search engine. Built using',
-      techStack: [' Next.js', 'Tailwind CSS', 'Google Custom Search API'],
-      features: [
-        'search functionality',
-        'login using Google Gmail account',
-        'visually appealing search results and image pages',
-        'pagination',
-        'responsive design',
-      ],
-    },
-    {
-      description: 'A website that allows property owners to effortlessly list their houses for rent or sale. The platform offers comprehensive property details, high-resolution image uploads, and a responsive design. Built using',
-      techStack: [' React.js', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
-      features: [
-        'comprehensive property details',
-        'high-resolution image uploads',
-        'responsive design',
-      ],
-    },
-    {
-      description: 'A website where lifts and floors can be generated from user input. Lifts move between floors based on button clicks, just like in real life. Requests made while lifts are busy are preserved and served when any of the lifts are free. Built using',
-      techStack: [' HTML', 'CSS', 'Vanilla JavaScript'],
-      features: [
-        'lifts and floors generation',
-        'responsive lift movement',
-        'preserving requests while lifts are busy',
-      ],
-    },
-  ];
-
-
+const ProjectSection = ({ imageSrc, title, description, techStack, features, liveLink, githubLink, projectPortfolio }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -61,31 +27,29 @@ const ProjectSection = ({ imageSrc, title, indexValue, liveLink, githubLink }) =
         >
           <Image src={imageSrc} width={800} height={800}
             loading="lazy"
-            alt='project' className='w-auto h-auto mx-auto shadow-2xl md:mx-0 outline-dashed outline-1 outline-primary' />
+            alt='project' className='h-auto mx-auto shadow-2xl md:mx-0 outline-dashed outline-1 outline-primary' />
         </motion.div>
         <motion.div className='self-end mt-3 md:w-3/4' animate={inView ? 'visible' : 'hidden'}
           variants={animationVariants2}
           transition={{ duration: 0.8, delay: 1 }}>
           <h3 className='mt-2 mb-3 text-3xl font-bold text-center text-teal-500 md:text-left md:text-5xl font-Caveat'>{title}</h3>
-          {
-            <p key={indexValue} className='self-end mb-3 font-mono text-lg'>
-              {projectsData[indexValue].description}
-              {projectsData[indexValue].techStack.map((tech, i) => (
-                <span key={i} className={`text-2xl font-bold tracking-widest ${indexValue === 0 ? 'text-pink-500' : indexValue === 1 ? 'text-yellow-500' : 'text-[#B799FF]'} font-sans`}>
-                  {tech} {i !== projectsData[indexValue].techStack.length - 1 && ', '}
-                </span>
-              ))}
-
-              , it offers features such as{projectsData[indexValue].features.map((feature, i) => (
-                <React.Fragment key={i}>
-                  {feature}
-                  {i !== projectsData[indexValue].features.length - 1 ? ', ' : '.'}
-                </React.Fragment>
-              ))}
-            </p>
-          }
-          <a href={liveLink} target='_blank' rel="noreferrer" className='font-serif text-lg text-blue-500 transition duration-150 ease-in cursor-pointer hover:text-blue-800 md:text-2xl'>Live</a>
-          <a href={githubLink} target='_blank' rel="noreferrer" className='ml-2 font-serif text-lg text-blue-500 transition duration-150 ease-in cursor-pointer hover:text-blue-800 md:text-2xl'>Github</a>
+          <p className='self-end mb-3 font-mono text-lg'>
+            {description}
+            {techStack.map((tech, i) => (
+              <span key={i} className={`text-2xl font-bold tracking-widest ${i % 3 === 0 ? 'text-pink-500' : i % 3 === 1 ? 'text-yellow-500' : 'text-[#B799FF]'} font-sans`}>
+                {tech} {i !== techStack.length - 1 && ', '}
+              </span>
+            ))}
+            ,{features}{projectPortfolio && (
+              <a href={projectPortfolio} target='_blank' rel='noopener noreferrer' className='text-lg font-bold'>View our <span className='underline text-primary'>Tabstacker Portfolio</span>.</a>
+            )}
+          </p>
+          {liveLink && (
+            <a href={liveLink} target='_blank' rel='noopener noreferrer' className='px-4 py-2 text-lg font-bold text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'>{`Live Link`}</a>
+          )}
+          {githubLink && (
+            <a href={githubLink} target='_blank' rel='noopener noreferrer' className='px-4 py-2 ml-2 text-lg font-bold text-white bg-gray-800 rounded hover:bg-gray-900 focus:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2'>{`GitHub`}</a>
+          )}
         </motion.div>
       </div>
     </div>

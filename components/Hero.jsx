@@ -11,7 +11,7 @@ const Hero = () => {
         <ElementWrapper nameOfTheElement="hero">
             <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden select-none">
                 <div className='max-w-6xl p-2 rounded-lg shadow-2xl '>
-                    <div className='absolute top-[10%] cursor-pointer left-[66%]  hidden lg:block'>
+                    <div className='absolute top-[15%] cursor-pointer left-[66%]  hidden lg:block'>
                         <a href="https://github.com/Mudassirkhan2"
                             target="_blank" rel="noopener noreferrer" className="cursor-pointer "
                         >
@@ -26,7 +26,7 @@ const Hero = () => {
                             </Image>
                         </a>
                     </div>
-                    <div className='absolute hidden cursor-pointer top-[10%] left-1/3 lg:block'>
+                    <div className='absolute hidden cursor-pointer top-[15%] left-1/3 lg:block'>
                         <a
                             href="mailto:mudassir222001@gmail.com " target="_blank" rel="noopener noreferrer" className="cursor-pointer "
                         >
