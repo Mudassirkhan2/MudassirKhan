@@ -5,6 +5,10 @@ import twitterIcon from '../app/assets/twitter.png';
 import Image from 'next/image';
 import HeroAnimation from './clients/HeroAnimation';
 import { ElementWrapper } from './clients/client';
+export const metadata = {
+    title: 'Mudassir Khan - Web Developer',
+    description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like to Play with Css.Tech Stack are React.JS, Next.JS, Tailwindcss',
+}
 
 const Hero = () => {
     return (

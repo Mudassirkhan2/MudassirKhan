@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Mudassir Khan - Web Developer',
-  description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like Play with Css.Tech Stack are Html, CSS, JS,  React.JS, NEXT.JS, Tailwindcss',
+  description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like to Play with Css.Tech Stack are React.JS, Next.JS, Tailwindcss',
 }
 
 

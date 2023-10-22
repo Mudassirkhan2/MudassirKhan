@@ -6,7 +6,9 @@ import NavBar from "@/components/NavBar";
 import Projects from "@/components/Projects";
 import SecModal from "@/components/SecModal";
 import HeroBg from "@/components/clients/HeroBg";
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
+
 export default function Home() {
   const [attention, setAttention] = useState(false);
 
