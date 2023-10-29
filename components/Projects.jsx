@@ -45,16 +45,6 @@ const Projects = () => {
             liveLink='https://www.bugbountybrigade.tech/'
             githubLink='https://github.com/Mudassirkhan2/bug-bounty-brigade-website'
           />
-          <ProjectSection
-            imageSrc={liftSimulationGif}
-            title='Lift Simulation 🛗'
-            indexValue={2}
-            description='A website where lifts and floors can be generated from user input.Lifts move between floors based on button clicks, just like in real life. Requests made while lifts are busy are preserved and served when any of the lifts are free . Built using '
-            techStack={['HTML', 'CSS', 'Vanilla JavaScript']}
-            features='  it offers features such as lifts and floors generation, responsive lift movement, preserving requests while lifts are busy.'
-            liveLink='https://mudassirkhan2.github.io/Lift-Simulation/'
-            githubLink='https://github.com/Mudassirkhan2/Lift-Simulation'
-          />
         </div>
       </section>
     </ElementWrapper>

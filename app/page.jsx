@@ -27,7 +27,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </div>
-      {attention && <SecModal handleClose={() => setAttention(false)} />}
+      {/* {attention && <SecModal handleClose={() => setAttention(false)} />} */}
     </main>
   )
 }
