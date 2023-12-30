@@ -4,8 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --glow-rgb: 239 42 201;
+}
+
 body {
   background: rgb(2, 0, 36);
+  cursor: none;
 }
 
 * {
@@ -38,7 +43,7 @@ html {
 
 
 .glow-point {
-  position: absolute;
+  position: fixed;
   box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
   pointer-events: none;
 }
@@ -50,7 +55,6 @@ html {
   animation-duration: 1500ms;
   animation-fill-mode: forwards;
   pointer-events: none;
-  animation: fall-1 1500ms ease-in-out 0ms infinite;
 }
 
 @keyframes fall-1 {

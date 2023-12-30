@@ -73,7 +73,7 @@ const Hero = () => {
                         <HeroAnimation />
                         <p className="mt-3 mb-8 text-2xl text-center md:text-4xl "> a
                             <span className='text-[#B799FF]'>
-                                <span className=' text-primary'> Frontend Developer </span>
+                                <span className=' text-primary'> Web Developer </span>
                             </span>
                             From Hyderabad
                         </p>
