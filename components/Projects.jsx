@@ -1,7 +1,7 @@
-import HomeFinderGif from '../app/assets/HomeFinder.gif';
-import bugbounty from '../app/assets/bugbounty.png';
-import tabstacker from '../app/assets/tabstacker.png';
-import liftSimulationGif from '../app/assets/liftSimulation.gif';
+"use client"
+import HomeFinderGif from '../public/assets/HomeFinder.gif';
+import bugbounty from '../public/assets/bugbounty.png';
+import tabstacker from '../public/assets/tabstacker.png';
 import AnimateLetters from './clients/AnimateLetters';
 import ProjectSection from './clients/ProjectSection';
 import { ElementWrapper } from './clients/client';

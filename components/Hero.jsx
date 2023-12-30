@@ -1,7 +1,7 @@
-import GithubIcon from '../app/assets/githubIcon.png';
-import gmailIcon from '../app/assets/gmail.png';
-import linkedinIcon from '../app/assets/linkedin.png';
-import twitterIcon from '../app/assets/twitter.png';
+import GithubIcon from '../public/assets/githubIcon.png';
+import gmailIcon from '../public/assets/gmail.png';
+import linkedinIcon from '../public/assets/linkedin.png';
+import twitterIcon from '../public/assets/twitter.png';
 import Image from 'next/image';
 import HeroAnimation from './clients/HeroAnimation';
 import { ElementWrapper } from './clients/client';
