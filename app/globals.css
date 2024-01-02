@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Space+Grotesk&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,4 +107,8 @@ html {
     transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
     opacity: 0;
   }
+}
+
+.techBg {
+  background: linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.35) 100%)
 }

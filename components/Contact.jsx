@@ -2,13 +2,15 @@
 import GithubIcon from '../public/assets/githubIcon.png';
 import gmailIcon from '../public/assets/gmail.png';
 import linkedinIcon from '../public/assets/linkedin.png';
-import twitterIcon from '../public/assets/twitter.png';
+import twitterIcon from '../public/assets/twitter.jpg';
 import Image from 'next/image';
 import { ElementWrapper } from './clients/client';
+import AnimateLetters from './clients/AnimateLetters';
 const Contact = () => {
   return (
     <ElementWrapper nameOfTheElement="contact">
       <section className='max-w-6xl p-2 mx-auto mt-10 '>
+        <AnimateLetters letter='Contact Me' />
         <div className='flex justify-center w-full mb-8 gap-x-10'>
           <a href="https://www.linkedin.com/in/mudassir-khan-522303233/"
             target="_blank" className="cursor-pointer "
@@ -26,7 +28,7 @@ const Contact = () => {
           <a href="https://twitter.com/Mudassir_222"
             target="_blank" className="cursor-pointer "
           >
-            <Image src={twitterIcon} alt='contact' width={50} height={50} loading='lazy' />
+            <Image src={twitterIcon} alt='contact' width={50} height={50} loading='lazy' className='mix-blend-screen' />
           </a>
         </div>
       </section>

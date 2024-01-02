@@ -21,6 +21,7 @@ module.exports = {
         Caveat: ['Caveat', 'ui-sans-serif', 'system-ui'],
         jost: ['Jost', 'ui-sans-serif', 'system-ui'],
         nabla: ['Nabla', 'ui-sans-serif', 'system-ui'],
+        SpaceGrotesk : ['Space Grotesk', 'sans-serif']
       },
     plugins: [],
   }

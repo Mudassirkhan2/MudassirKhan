@@ -61,7 +61,7 @@ const Cursor = () => {
         };
     }, []);
     return (
-        <div ref={cursorRef} className='glow-point'
+        <div ref={cursorRef} className='glow-point mix-blend-difference'
             style={{
                 top: position.top,
                 left: position.left,

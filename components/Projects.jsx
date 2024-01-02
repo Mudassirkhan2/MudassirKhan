@@ -1,5 +1,6 @@
 "use client"
-import HomeFinderGif from '../public/assets/HomeFinder.gif';
+import Link from 'next/link';
+import HomeFinderGif from '../public/assets/homefinder.png';
 import bugbounty from '../public/assets/bugbounty.png';
 import tabstacker from '../public/assets/tabstacker.png';
 import AnimateLetters from './clients/AnimateLetters';
@@ -40,12 +41,19 @@ const Projects = () => {
             title='Bug Bounty Brigade 🛡️'
             indexValue={1}
             description='Developed a website for the cybersecurity community, aimed at providing a valuable online resource for enthusiasts, professionals, and anyone interested in the field. This project involved the use of modern web technologies, including  '
-            techStack={['Next.js', 'Tailwind CSS', 'TypeScript', 'Radix-ui']}
+            techStack={['Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn']}
             features=' it offers features where  Users can find information about upcoming cybersecurity events, workshops, and webinars. '
             liveLink='https://www.bugbountybrigade.tech/'
             githubLink='https://github.com/Mudassirkhan2/bug-bounty-brigade-website'
           />
+          <Link href='/projects'
+            className='px-4 py-2 mx-auto mt-10 text-base font-medium bg-gray-800 border border-transparent rounded-md shadow-sm cursor-pointer outline-dashed outline-1 outline-primary text-[#B799FF] w-fit hover:bg-gray-700 focus:outline-none hover:outline-[#B799FF]   focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:shadow-2xl hover:shadow-cyan-600'
+          >
+            View More Projects
+          </Link>
+
         </div>
+
       </section>
     </ElementWrapper>
   );
