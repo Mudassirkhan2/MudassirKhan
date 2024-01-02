@@ -20,7 +20,7 @@ const About = () => {
             </div>
           </div>
           <div className='p-2 mb-4 select-none md:w-1/2 outline-dashed outline-1 outline-secondary'>
-            <h2 className='mb-6 text-4xl text-center md:text-start' >Language and <span className='text-primary'> Tools</span> </h2>
+            <h2 className='mb-6 text-4xl text-center text-primary' >Tools and Languages <span className='text-center text-white'>I Command </span> </h2>
             <ul className='flex flex-wrap justify-center gap-12 mb-2 md:gap-7'>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
@@ -28,7 +28,7 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Next js</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Next js</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -36,16 +36,23 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">React JS</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">React JS</div>
               </li>
-
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="react js"
+                  width={70}
+                  height={70}
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">TypeScript</div>
+              </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
                   alt="redux-toolkit"
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">redux-toolkit</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">redux-toolkit</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
@@ -53,7 +60,23 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Tailwind CSS</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Tailwind CSS</div>
+              </li>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg"
+                  alt="tailwind css"
+                  width={70}
+                  height={70}
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">mongodb</div>
+              </li>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                  alt="firebase "
+                  width={70}
+                  height={70}
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">firebase</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
@@ -61,7 +84,23 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">JavaScript</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">JavaScript</div>
+              </li>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="JavaScript"
+                  width={70}
+                  height={70}
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">CSS</div>
+              </li>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="JavaScript"
+                  width={70}
+                  height={70}
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">HTML</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
@@ -69,24 +108,17 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Python</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Python</div>
               </li>
 
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                  alt="firebase "
-                  width={70}
-                  height={70}
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">firebase</div>
-              </li>
+
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src={FramerIcon}
                   alt="Framer motion"
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Framer motion</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Framer motion</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
@@ -94,7 +126,7 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Figma</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Figma</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
@@ -102,7 +134,7 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Git</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Git</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
@@ -110,17 +142,9 @@ const About = () => {
                   width={70}
                   height={70}
                 />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 md:scale-0">Github</div>
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Github</div>
               </li>
 
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                  alt="Vs Code"
-                  width={70}
-                  height={70}
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-3/4 whitespace-nowrap bg-primary text-base-100 group-hover:scale-100 group-hover:opacity-100 md:scale-0">Vscode</div>
-              </li>
             </ul>
           </div>
         </div>

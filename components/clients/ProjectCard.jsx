@@ -33,7 +33,7 @@ const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLi
           variants={animationVariants2}
           transition={{ duration: 0.8, delay: 1 }}>
           <h3 className='mt-2 mb-3 text-3xl font-bold text-center text-teal-500 md:text-left md:text-5xl font-Caveat'>{title}</h3>
-          <p className='self-end mb-3 font-mono text-lg'>
+          <p className='self-end mb-3 text-lg font-SpaceGrotesk'>
             {description}
             {techStack.map((tech, i) => (
               <span key={i} className={`text-2xl font-bold tracking-widest ${i % 3 === 0 ? 'text-pink-500' : i % 3 === 1 ? 'text-yellow-500' : 'text-[#B799FF]'} font-sans`}>

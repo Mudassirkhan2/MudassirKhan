@@ -43,7 +43,7 @@ const AnimateLetters = ({ letter }) => {
         animate={inView && isMounted ? 'animate' : 'initial'}
         variants={sentenceVariants}
         transition={{ duration: 1 }}
-        className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-6xl'
+        className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-5xl xl:text-6xl'
 
       >
         {letters.map((letter, index) => (
