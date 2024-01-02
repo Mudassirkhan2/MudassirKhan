@@ -1,13 +1,26 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { RiMenuFoldLine } from 'react-icons/ri';
 import { GiCrossedBones } from 'react-icons/gi';
 const NavBar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(true);
+    const [navHidden, setNavHidden] = useState(false)
+    const { scrollY } = useScroll()
+    useMotionValueEvent(scrollY, "change",
+        (latest) => {
+            const prvious = scrollY.getPrevious()
+            if (prvious > latest) {
+                setNavHidden(false)
+            }
+            else {
+                setNavHidden(true)
+            }
+        }
+    )
     const handleToggle = () => {
         setShowMediaIcons(!showMediaIcons)
-
     }
     const handleLinkClick = () => {
         setShowMediaIcons(true)
@@ -15,16 +28,25 @@ const NavBar = () => {
 
 
     return (
-        <header className="fixed top-0 left-0 z-20 w-full "  >
+        <motion.header
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-105%" }
+
+            }}
+            animate={navHidden ? "hidden" : "visible"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="fixed top-0 left-0 z-20 w-full "  >
             <nav className="flex items-center justify-between w-full max-w-6xl mx-auto shadow-2xl select-none outline-dashed outline-2 outline-secondary bg-[#020024] ">
-                <div className='p-2 ml-2 text-4xl cursor-pointer font-Caveat lg:ml-4 '>
+                <div className='p-2 ml-2 text-2xl cursor-pointer font-Caveat lg:ml-4 '>
                     <Link
                         to="hero"
                         smooth={true}
                         offset={-70}
                         duration={500}
-                    ><span className='text-primary'>M</span><span className='font-bold text-red-500'>K</span>
-                        {/* <img src={logo} alt="space-tourism" className='w-12 h-12 max-w-none' /> */}
+                    ><span className=' text-primary'>Mudassir</span>
+                        <span className='ml-2 font-bold text-red-500'>Khan</span>
+
                     </Link>
                 </div>
                 {
@@ -79,7 +101,7 @@ const NavBar = () => {
 
                 </ul>
             </nav>
-        </header>
+        </motion.header>
     )
 }
 export default NavBar

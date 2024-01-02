@@ -9,7 +9,7 @@ const About = () => {
     <ElementWrapper nameOfTheElement="about">
       <section className="max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1 outline-secondary">
         <AnimateLetters letter='Something About Me' />
-        <div className='flex flex-col mt-10 gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'>
+        <div className='flex flex-col mt-10 select-none gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'>
           <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
             <h2 className='mb-6 text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
             <div className='space-y-3'>
