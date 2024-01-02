@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
-const ProjectSection = ({ imageSrc, title, description, techStack, features, liveLink, githubLink, projectPortfolio }) => {
+const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLink, githubLink, projectPortfolio }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -57,4 +57,4 @@ const ProjectSection = ({ imageSrc, title, description, techStack, features, liv
   );
 };
 
-export default ProjectSection;
+export default ProjectCard;

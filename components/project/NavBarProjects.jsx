@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import AnimateLetters from '../clients/AnimateLetters'
+import AnimateLetters from '../common/AnimateLetters'
 
 const NavBarProjects = () => {
     return (

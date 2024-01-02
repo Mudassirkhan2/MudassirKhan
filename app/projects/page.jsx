@@ -1,7 +1,6 @@
-import Contact from '@/components/Contact';
-import Cursor from '@/components/clients/Cursor'
+import Contact from '@/components/common/Contact';
+import Cursor from '@/components/common/Cursor'
 import NavBarProjects from '@/components/project/NavBarProjects';
-
 import ProjectSection from '@/components/project/ProjectSection';
 const page = () => {
     return (

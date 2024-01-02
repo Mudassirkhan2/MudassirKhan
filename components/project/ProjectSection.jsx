@@ -5,7 +5,6 @@ import agileflow from '../../public/assets/agileflow.png';
 import insightSphere from '../../public/assets/insightSphere.png';
 import agileboard from '../../public/assets/agileboard.png';
 import liftsimulation from '../../public/assets/liftsimulation.png';
-import ecommerce from '../../public/assets/ecommerce.png';
 import weatherapp from '../../public/assets/weatherapp.png';
 import ipaddresstracker from '../../public/assets/ipaddresstracker.png';
 import googleclone from '../../public/assets/googleclone.png';
@@ -262,7 +261,7 @@ const ProjectSection = () => {
                 </section>
             </div>
 
-            <div className=''>
+            <div>
                 <li className='px-2 py-1 mx-auto mt-4 text-center list-none transition duration-500 ease-in-out rounded-lg cursor-pointer hover:text-primary outline-primary outline-dashed outline-1 text-cyan-500 hover:shadow-2xl hover:shadow-cyan-600 w-fit'>
                     <Link
                         href='/'

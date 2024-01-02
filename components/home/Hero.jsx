@@ -1,10 +1,10 @@
-import GithubIcon from '../public/assets/githubIcon.png';
-import gmailIcon from '../public/assets/gmail.png';
-import linkedinIcon from '../public/assets/linkedin.png';
-import twitterIcon from '../public/assets/twitter.jpg';
+import GithubIcon from '../../public/assets/githubIcon.png';
+import gmailIcon from '../../public/assets/gmail.png';
+import linkedinIcon from '../../public/assets/linkedin.png';
+import twitterIcon from '../../public/assets/twitter.jpg';
 import Image from 'next/image';
-import HeroAnimation from './clients/HeroAnimation';
-import { ElementWrapper } from './clients/client';
+import HeroAnimation from '../clients/HeroAnimation';
+import { ElementWrapper } from '../clients/client';
 export const metadata = {
     title: 'Mudassir Khan - Web Developer',
     description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like to Play with Css.Tech Stack are React.JS, Next.JS, Tailwindcss',

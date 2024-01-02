@@ -1,9 +1,9 @@
 "use client";
 import Image from 'next/image'
 import React from 'react'
-import FramerIcon from '../public/assets/framer.png';
-import AnimateLetters from './clients/AnimateLetters';
-import { ElementWrapper } from './clients/client';
+import FramerIcon from '../../public/assets/framer.png';
+import AnimateLetters from '../common/AnimateLetters';
+import { ElementWrapper } from '../clients/client';
 const About = () => {
   return (
     <ElementWrapper nameOfTheElement="about">

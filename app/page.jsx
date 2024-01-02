@@ -1,10 +1,10 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
-import NavBar from "@/components/NavBar";
-import Projects from "@/components/Projects";
-import Cursor from "@/components/clients/Cursor";
+import About from "@/components/home/About";
+import Contact from "@/components/common/Contact";
+import Hero from "@/components/home/Hero";
+import Projects from "@/components/home/Projects";
 import HeroBg from "@/components/clients/HeroBg";
+import NavBar from "@/components/layout/NavBar";
+import Cursor from "@/components/common/Cursor";
 
 
 export default function Home() {

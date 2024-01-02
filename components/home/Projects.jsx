@@ -1,11 +1,11 @@
 "use client"
 import Link from 'next/link';
-import HomeFinderGif from '../public/assets/homefinder.png';
-import bugbounty from '../public/assets/bugbounty.png';
-import tabstacker from '../public/assets/tabstacker.png';
-import AnimateLetters from './clients/AnimateLetters';
-import ProjectSection from './clients/ProjectSection';
-import { ElementWrapper } from './clients/client';
+import HomeFinderGif from '../../public/assets/homefinder.png';
+import bugbounty from '../../public/assets/bugbounty.png';
+import tabstacker from '../../public/assets/tabstacker.png';
+import AnimateLetters from '../common/AnimateLetters';
+import { ElementWrapper } from '../clients/client';
+import ProjectCard from '../clients/ProjectCard';
 
 const Projects = () => {
 
@@ -14,7 +14,7 @@ const Projects = () => {
       <section className='max-w-6xl p-2 mx-auto mt-10 overflow-hidden rounded-lg shadow-2xl md:p-4'>
         <AnimateLetters letter='My Featured Projects' />
         <div className='flex flex-col gap-24'>
-          <ProjectSection
+          <ProjectCard
             imageSrc={tabstacker}
             title='TabStacker 📑'
             indexValue={0}
@@ -25,7 +25,7 @@ const Projects = () => {
             liveLink='https://tabstacker.vercel.app/'
             githubLink='https://github.com/Mudassirkhan2/tabstacker-frontend'
           />
-          <ProjectSection
+          <ProjectCard
             imageSrc={HomeFinderGif}
             title='Home Finder 🏠'
             indexValue={1}
@@ -36,7 +36,7 @@ const Projects = () => {
             liveLink='https://home-finder-khan.vercel.app/'
             githubLink='https://github.com/Mudassirkhan2/HomeFinder'
           />
-          <ProjectSection
+          <ProjectCard
             imageSrc={bugbounty}
             title='Bug Bounty Brigade 🛡️'
             indexValue={1}
