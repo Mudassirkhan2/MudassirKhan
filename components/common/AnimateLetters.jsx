@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import LineAnimation from './LineAnimation';
 
 const AnimateLetters = ({ letter }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -55,7 +56,10 @@ const AnimateLetters = ({ letter }) => {
               delay: index * 0.08,
             }}
           >
-            {letter}
+            <LineAnimation>
+
+              {letter}
+            </LineAnimation>
           </motion.span>
         ))}
       </motion.h2>

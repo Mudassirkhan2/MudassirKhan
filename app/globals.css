@@ -112,3 +112,68 @@ html {
 .techBg {
   background: linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.35) 100%)
 }
+
+
+
+.inter-myself::before {
+  height: 4px;
+  top: 0;
+  animation: lineDown 1s linear infinite;
+}
+
+.inter-myself::after {
+  height: 4px;
+  bottom: 0;
+  animation: lineUp 1s linear infinite;
+}
+
+.inter-myself::before,
+.inter-myself::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: rgb(12, 8, 88);
+  left: 0;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+@keyframes lineDown {
+  20% {
+    top: 70%;
+    opacity: 0;
+  }
+
+  40% {
+    top: 40%;
+    opacity: 1;
+  }
+
+  60% {
+    top: 70%;
+  }
+
+  80% {
+    top: 40%;
+  }
+}
+
+@keyframes lineUp {
+  20% {
+    bottom: 70%;
+    opacity: 0;
+  }
+
+  40% {
+    bottom: 40%;
+    opacity: 1;
+  }
+
+  60% {
+    bottom: 70%;
+  }
+
+  80% {
+    bottom: 40%;
+  }
+}
