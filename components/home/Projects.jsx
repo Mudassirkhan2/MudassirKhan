@@ -11,7 +11,7 @@ const Projects = () => {
 
   return (
     <ElementWrapper nameOfTheElement='projects'>
-      <section className='max-w-6xl p-2 mx-auto mt-10 overflow-hidden rounded-lg shadow-2xl md:p-4'>
+      <section className='max-w-6xl p-2 mx-auto mt-10 overflow-hidden rounded-lg shadow-2xl md:p-4 '>
         <AnimateLetters letter='My Featured Projects' />
         <div className='flex flex-col gap-12 xl:gap-16'>
           <ProjectCard

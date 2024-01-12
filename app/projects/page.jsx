@@ -4,7 +4,7 @@ import NavBarProjects from '@/components/project/NavBarProjects';
 import ProjectSection from '@/components/project/ProjectSection';
 const page = () => {
     return (
-        <main className="relative min-h-screen mx-auto text-white ">
+        <main className="relative min-h-screen mx-auto text-white dottedBackground">
             <NavBarProjects />
             <ProjectSection />
             <Contact />
