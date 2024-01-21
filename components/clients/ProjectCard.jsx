@@ -25,7 +25,7 @@ const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLi
           variants={animationVariants1}
           transition={{ duration: 0.8 }}
         >
-          <Image src={imageSrc} width={800} height={800}
+          <Image src={imageSrc} width={800} height="auto"
             loading="lazy"
             alt='project' className='h-auto mx-auto shadow-2xl md:mx-0 outline-dashed outline-1 outline-primary' />
         </motion.div>
