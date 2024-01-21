@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
-const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLink, githubLink, projectPortfolio }) => {
+const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLink, githubLink, projectPortfolio, collobratedWith }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -40,8 +40,14 @@ const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLi
                 {tech} {i !== techStack.length - 1 && ', '}
               </span>
             ))}
-            ,{features}{projectPortfolio && (
-              <a href={projectPortfolio} target='_blank' rel='noopener noreferrer' className='text-lg font-bold'>View our <span className='underline text-primary'>Tabstacker Portfolio</span>.</a>
+            ,{features}
+            {
+              collobratedWith && (
+                <span className='text-lg font-bold text-yellow-100'>Collaborated with a cross-functional team consisting of a Product Manager, a Designer, and a Developer.</span>
+              )
+            }
+            {projectPortfolio && (
+              <a href={projectPortfolio} target='_blank' rel='noopener noreferrer' className='text-lg '> View our <span className='underline text-primary'>Tabstacker Portfolio</span>.</a>
             )}
           </p>
           {liveLink && (

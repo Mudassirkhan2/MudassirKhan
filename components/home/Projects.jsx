@@ -20,7 +20,8 @@ const Projects = () => {
             indexValue={0}
             description='A tab management extension. Built using '
             techStack={['React.js', 'Tailwind CSS', 'Chrome Extension API']}
-            features=' Offers a comprehensive solution for organizing and optimizing browsing sessions leading to a more streamlined workflow and improved productivity. Login using Google Gmail account. Responsive design. Collaborated with a cross-functional team consisting of a Product Manager, a Designer, and a Developer.'
+            features=' Offers a comprehensive solution for organizing and optimizing browsing sessions leading to a more streamlined workflow and improved productivity. Login using Google Gmail account. Responsive design. '
+            collobratedWith={true}
             projectPortfolio='https://www.joincolab.io/product/tabstacker'
             liveLink='https://tabstacker.vercel.app/'
             githubLink='https://github.com/Mudassirkhan2/tabstacker-frontend'
