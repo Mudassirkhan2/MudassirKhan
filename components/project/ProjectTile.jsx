@@ -12,7 +12,7 @@ export const ProjectTile = ({ imageSrc, title, description, technologies, websit
                 }
             }
         >
-            <Image src={imageSrc} alt={title} width={800} height={800} loading='lazy' className='w-[95%] h-[80%] lg:w-[50%] rounded-lg'
+            <Image src={imageSrc} alt={title} width={800} height={800} loading='lazy' className='w-[95%] h-[80%] lg:w-[50%] rounded-lg shadow-xl shadow-gray-500'
             />
             <section className='xl:w-[30%] px-4'>
                 <Reveal>

@@ -14,7 +14,7 @@ const Hero = () => {
     return (
         <ElementWrapper nameOfTheElement="hero">
             <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden select-none">
-                <div className='max-w-6xl p-2 rounded-lg shadow-2xl '>
+                <div className='max-w-6xl p-2 rounded-lg '>
                     <div className='absolute top-[15%] cursor-pointer left-[66%]  hidden lg:block'>
                         <a href="https://github.com/Mudassirkhan2"
                             target="_blank" rel="noopener noreferrer" className="cursor-pointer "
@@ -73,7 +73,7 @@ const Hero = () => {
                         <HeroAnimation />
                         <p className="mt-3 mb-8 text-2xl text-center md:text-4xl "> a
                             <span className=' text-primary'> Web Developer </span>
-                            From Hyderabad
+                            From INDIA
                         </p>
                     </div>
                 </div>

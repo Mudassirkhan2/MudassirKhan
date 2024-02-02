@@ -46,12 +46,9 @@ const Projects = () => {
             liveLink='https://www.bugbountybrigade.tech/'
             githubLink='https://github.com/Mudassirkhan2/bug-bounty-brigade-website'
           />
-          <Link href='/projects'
-            className='px-4 py-2 mx-auto mt-10 text-base font-medium bg-gray-800 border border-transparent rounded-md shadow-sm cursor-pointer outline-dashed outline-1 outline-primary text-[#B799FF] w-fit hover:bg-gray-700 focus:outline-none hover:outline-[#B799FF]   focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:shadow-2xl hover:shadow-cyan-600'
-          >
+          <Link href='/projects' className="inline-flex mx-auto h-12 w-fit animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#B799FF] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ">
             View More Projects
           </Link>
-
         </div>
 
       </section>
