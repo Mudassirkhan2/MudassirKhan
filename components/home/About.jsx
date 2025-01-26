@@ -4,12 +4,26 @@ import React from 'react'
 import FramerIcon from '../../public/assets/framer.png';
 import AnimateLetters from '../common/AnimateLetters';
 import { ElementWrapper } from '../clients/client';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3
+  });
+
   return (
     <ElementWrapper nameOfTheElement="about">
       <section className="max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1 outline-secondary">
         <AnimateLetters letter='Something About Me' />
-        <div className='flex flex-col mt-10 select-none gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'>
+        <motion.div
+          ref={ref}
+          initial={{ filter: 'blur(5px)' }}
+          animate={{ filter: inView ? 'blur(0px)' : 'blur(5px)' }}
+          transition={{ duration: 0.5 }}
+          className='flex flex-col mt-10 select-none gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'
+        >
           <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
             <h2 className='mb-6 text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
             <div className='space-y-3'>
@@ -173,7 +187,7 @@ const About = () => {
 
             </ul>
           </div>
-        </div>
+        </motion.div>
       </section>
     </ElementWrapper>
   )
