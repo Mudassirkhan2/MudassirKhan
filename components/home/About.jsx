@@ -13,15 +13,33 @@ const About = () => {
           <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
             <h2 className='mb-6 text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
             <div className='space-y-3'>
-              <p className='font-mono text-base md:text-xl'>Having successfully completed my studies in BTech Electrical and Electronics Engineering, I possess a distinctive combination of engineering expertise and proficient coding skills. I&apos;m  passionate about creating captivating user experiences through intuitive and responsive front-end development.
+              <p className='font-mono text-base md:text-xl'>As a front-end developer working professionally with Angular, I combine my engineering background in BTech Electrical and Electronics with hands-on experience building scalable web applications. Currently developing enterprise-level solutions at Shipthis, I specialize in creating intuitive interfaces and robust architectures that deliver seamless user experiences.
               </p>
-              <p className='font-mono text-base md:text-xl'>I actively contribute to the open-source community and enjoy collaborating with like-minded individuals to bring innovative ideas to life.  My tech stack includes Next.js, React, TailwindCSS, and Im always eager to learn and expand my skills.
+              <p className='font-mono text-base md:text-xl'>  My expertise spans modern front-end technologies including Angular, TypeScript, Next.js and React, with a strong focus on reactive programming and component-based architecture. Beyond client work, I actively contribute to open-source projects and collaborate with cross-functional teams to solve complex problems through innovative technical solutions. I continuously expand my skills in  performance optimization, and modern web development practices.
               </p>
             </div>
           </div>
           <div className='p-2 mb-4 select-none md:w-1/2 outline-dashed outline-1 outline-secondary'>
             <h2 className='mb-6 text-4xl text-center text-primary' >Tools and Languages <span className='text-center text-white'>I Command </span> </h2>
             <ul className='flex flex-wrap justify-center gap-12 mb-2 md:gap-7'>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                  alt="angular"
+                  width={70}
+                  height={70}
+                  className='w-10 h-10 lg:w-16 lg:h-16'
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Angular</div>
+              </li>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg"
+                  alt="Material"
+                  width={70}
+                  height={70}
+                  className='w-10 h-10 lg:w-16 lg:h-16'
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 "> Angular Material</div>
+              </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                   alt="Nextjs"
@@ -49,23 +67,24 @@ const About = () => {
                 />
                 <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">TypeScript</div>
               </li>
+
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-                  alt="redux-toolkit"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">redux-toolkit</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
                   alt="tailwind css"
                   width={70}
                   height={70}
                   className='w-10 h-10 lg:w-16 lg:h-16'
                 />
                 <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Tailwind CSS</div>
+              </li>
+              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
+                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+                  alt="sass"
+                  width={70}
+                  height={70}
+                  className='w-10 h-10 lg:w-16 lg:h-16'
+                />
+                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">SASS</div>
               </li>
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg"
@@ -76,15 +95,7 @@ const About = () => {
                 />
                 <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">mongodb</div>
               </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                  alt="firebase "
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">firebase</div>
-              </li>
+
               <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
                 <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                   alt="JavaScript"

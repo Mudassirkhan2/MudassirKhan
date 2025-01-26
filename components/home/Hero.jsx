@@ -7,7 +7,7 @@ import HeroAnimation from '../clients/HeroAnimation';
 import { ElementWrapper } from '../clients/client';
 export const metadata = {
     title: 'Mudassir Khan - Web Developer',
-    description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like to Play with Css.Tech Stack are React.JS, Next.JS, Tailwindcss',
+    description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like to Play with Css.Tech Stack are Angular, React.JS, Next.JS, Tailwindcss',
 }
 
 const Hero = () => {
@@ -71,9 +71,10 @@ const Hero = () => {
                     </div>
                     <div className="flex flex-col w-full">
                         <HeroAnimation />
-                        <p className="mt-3 mb-8 text-2xl text-center md:text-4xl "> a
-                            <span className=' text-primary'> Web Developer </span>
-                            From INDIA
+                        <p className="mt-3 mb-8 text-xl text-center md:text-4xl "> a
+                            <span className=' text-primary'> Frontend Developer </span>
+                            building scalable solutions
+                            <br /> with Angular | Next.js
                         </p>
                     </div>
                 </div>
