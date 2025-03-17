@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen mx-auto text-white mainimg dottedBackground">
       <div>
-        <HeroBg />
+        {/* <HeroBg /> */}
         <NavBar />
         <Hero />
         <About />

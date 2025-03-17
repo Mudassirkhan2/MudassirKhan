@@ -70,7 +70,16 @@ const Hero = () => {
                         </a>
                     </div>
                     <div className="flex flex-col w-full">
-                        <HeroAnimation />
+                        {/* <HeroAnimation /> */}
+
+                        <h1
+                            className="text-3xl text-teal-300 text-start whitespace-nowrap font-jost md:text-4xl lg:text-6xl xl:text-8xl lg:block"
+                        >
+                            <span className="outline-text" style={{ whiteSpace: "nowrap" }}>
+                                Hello! I&apos;m
+                            </span>{" "}
+                            Mudassir Khan
+                        </h1>
                         <p className="mt-3 mb-8 text-xl text-center md:text-4xl "> a
                             <span className=' text-primary'> Frontend Developer </span>
                             building scalable solutions
