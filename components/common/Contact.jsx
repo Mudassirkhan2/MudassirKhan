@@ -5,12 +5,12 @@ import linkedinIcon from '../../public/assets/linkedin.png';
 import twitterIcon from '../../public/assets/twitter.jpg';
 import Image from 'next/image';
 import { ElementWrapper } from '../clients/client';
-import AnimateLetters from './AnimateLetters';
 const Contact = () => {
   return (
     <ElementWrapper nameOfTheElement="contact">
-      <section className='max-w-6xl p-2 mx-auto mt-10 '>
-        <AnimateLetters letter='Contact Me' />
+      <section className='relative max-w-6xl p-2 mx-auto mt-10'>
+        <div className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-5xl xl:text-6xl'>   Contact  Me</div>
+        <span className="absolute h-16 top-4 w-2/3 rounded-lg left-1/2 -translate-x-1/2  bg-[#0038d666] blur-3xl z-0"></span>
         <div className='flex justify-center w-full mb-8 gap-x-10'>
           <a href="https://www.linkedin.com/in/mudassir-khan-522303233/"
             target="_blank" className="cursor-pointer "

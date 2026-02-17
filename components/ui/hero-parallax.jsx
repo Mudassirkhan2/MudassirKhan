@@ -63,7 +63,7 @@ export const HeroParallax = ({
                 }}
                 className=""
             >
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+                <motion.div className="flex flex-row-reverse mb-20 space-x-20 space-x-reverse">
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -72,7 +72,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row  mb-20 space-x-20 ">
+                <motion.div className="flex flex-row mb-20 space-x-20 ">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -81,7 +81,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+                <motion.div className="flex flex-row-reverse space-x-20 space-x-reverse">
                     {thirdRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -97,12 +97,15 @@ export const HeroParallax = ({
 
 export const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-            <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+        <div className="top-0 left-0 w-full px-4 py-20 mx-auto max-w-7xl md:py-40">
+
+            <h1 className="relative text-2xl font-bold md:text-7xl dark:text-white">
+                <span className="absolute h-16  w-2/3 rounded-lg  -translate-x-1/2  bg-[#0038d666] blur-3xl z-0"></span>
+
                 My Projects Portfolio
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-                Welcome to my projects showcase! Below, you'll find a selection of some of the exciting projects I've worked on recently. Each project demonstrates my expertise in Web development using  latest technologies .
+            <p className="max-w-2xl mt-8 text-base md:text-xl dark:text-neutral-200">
+                Welcome to my projects showcase! Below, you'll find a selection of some of the exciting projects I've worked on. Each project demonstrates my expertise in Web development using  latest technologies .
             </p>
         </div>
     );
@@ -131,12 +134,12 @@ export const ProductCard = ({
                     src={product.thumbnail}
                     height="600"
                     width="600"
-                    className="object-cover object-left-top absolute h-full w-full inset-0"
+                    className="absolute inset-0 object-cover object-left-top w-full h-full"
                     alt={product.title}
                 />
             </Link>
-            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+            <div className="absolute inset-0 w-full h-full bg-black opacity-0 pointer-events-none group-hover/product:opacity-80"></div>
+            <h2 className="absolute text-white opacity-0 bottom-4 left-4 group-hover/product:opacity-100">
                 {product.title}
             </h2>
         </motion.div>

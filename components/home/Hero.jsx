@@ -3,7 +3,6 @@ import gmailIcon from '../../public/assets/gmail.png';
 import linkedinIcon from '../../public/assets/linkedin.png';
 import twitterIcon from '../../public/assets/twitter.jpg';
 import Image from 'next/image';
-import HeroAnimation from '../clients/HeroAnimation';
 import { ElementWrapper } from '../clients/client';
 export const metadata = {
     title: 'Mudassir Khan - Web Developer',
@@ -13,7 +12,7 @@ export const metadata = {
 const Hero = () => {
     return (
         <ElementWrapper nameOfTheElement="hero">
-            <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden select-none">
+            <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden select-none ">
                 <div className='max-w-6xl p-2 rounded-lg '>
                     <div className='absolute top-[15%] cursor-pointer left-[66%]  hidden lg:block'>
                         <a href="https://github.com/Mudassirkhan2"
@@ -70,7 +69,6 @@ const Hero = () => {
                         </a>
                     </div>
                     <div className="flex flex-col w-full">
-                        {/* <HeroAnimation /> */}
 
                         <h1
                             className="text-3xl text-teal-300 text-start whitespace-nowrap font-jost md:text-4xl lg:text-6xl xl:text-8xl lg:block"
@@ -83,7 +81,7 @@ const Hero = () => {
                         <p className="mt-3 mb-8 text-xl text-center md:text-4xl "> a
                             <span className=' text-primary'> Frontend Developer </span>
                             building scalable solutions
-                            <br /> with Angular | Next.js
+                            <br />
                         </p>
                     </div>
                 </div>

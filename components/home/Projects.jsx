@@ -11,8 +11,9 @@ const Projects = () => {
 
   return (
     <ElementWrapper nameOfTheElement='projects'>
-      <section className='max-w-6xl p-2 mx-auto mt-10 overflow-hidden rounded-lg shadow-2xl md:p-4 '>
-        <AnimateLetters letter='My Featured Projects' />
+      <section className='relative max-w-6xl p-2 mx-auto mt-10 rounded-lg md:p-4'>
+        <div className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-5xl xl:text-6xl'>My Featured Projects</div>
+        <span className="absolute h-16 top-4 w-2/3 rounded-lg left-1/2 -translate-x-1/2  bg-[#0038d666] blur-3xl z-0"></span>
         <div className='flex flex-col gap-12 xl:gap-16'>
           <ProjectCard
             imageSrc={tabstacker}
