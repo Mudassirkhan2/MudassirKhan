@@ -1,93 +1,96 @@
-import GithubIcon from '../../public/assets/githubIcon.png';
-import gmailIcon from '../../public/assets/gmail.png';
-import linkedinIcon from '../../public/assets/linkedin.png';
-import twitterIcon from '../../public/assets/twitter.jpg';
-import Image from 'next/image';
+"use client"
+import { Link } from 'react-scroll';
 import { ElementWrapper } from '../clients/client';
-export const metadata = {
-    title: 'Mudassir Khan - Web Developer',
-    description: 'Mudassir Khan Portfolio Frontend developer Based in India. Like to Play with Css.Tech Stack are Angular, React.JS, Next.JS, Tailwindcss',
-}
+
+const stats = [
+    { value: '2.5', label: 'Years' },
+    { value: '10+', label: 'Projects' },
+    { value: '15+', label: 'Technologies' },
+];
 
 const Hero = () => {
     return (
         <ElementWrapper nameOfTheElement="hero">
-            <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden select-none ">
-                <div className='max-w-6xl p-2 rounded-lg '>
-                    <div className='absolute top-[15%] cursor-pointer left-[66%]  hidden lg:block'>
-                        <a href="https://github.com/Mudassirkhan2"
-                            target="_blank" rel="noopener noreferrer" className="cursor-pointer "
-                        >
-                            <Image
-                                src={GithubIcon}
-                                alt="Picture of the author"
-                                width={70}
-                                height={70}
-                                className="rounded-full"
-                            >
+            <div className="relative flex flex-col justify-center w-full min-h-screen overflow-hidden select-none">
+                <div className="relative max-w-[1180px] mx-auto w-full px-7 pt-32 pb-16">
+                    {/* Top metadata row */}
+                    <div className="flex justify-between items-center mb-6"
+                        style={{ fontSize: '13px', letterSpacing: '2px' }}>
+                        <div style={{ overflow: 'hidden' }}>
+                            <span className="uppercase font-mono text-[#6b7185] reveal-item" style={{ animationDelay: '0.05s', display: 'block' }}>
+                                Portfolio / {new Date().getFullYear()}
+                            </span>
+                        </div>
+                    </div>
 
-                            </Image>
-                        </a>
-                    </div>
-                    <div className='absolute hidden cursor-pointer top-[15%] left-1/3 lg:block'>
-                        <a
-                            href="mailto:mudassir222001@gmail.com " target="_blank" rel="noopener noreferrer" className="cursor-pointer "
-                        >
-                            <Image
-                                src={gmailIcon}
-                                alt="Picture of the author"
-                                width={70}
-                                height={70}
-                                className="rounded-full"
-                            ></Image>
-                        </a>
-                    </div>
-                    <div className='absolute left-0 hidden cursor-pointer top-3/4 lg:block' >
-                        <a href="https://www.linkedin.com/in/mudassir-khan-522303233/"
-                            target="_blank" rel="noopener noreferrer" className="cursor-pointer "
-                        >
-                            <Image
-                                src={linkedinIcon}
-                                alt="Picture of the author"
-                                width={70}
-                                height={70}
-                                className="rounded-full"
-                            ></Image>
-                        </a>
-                    </div>
-                    <div className='absolute right-0 hidden cursor-pointer top-1/4 lg:block '>
-                        <a href="https://twitter.com/Mudassir_222"
-                            target="_blank" rel="noopener noreferrer" className="cursor-pointer "
-                        >
-                            <Image
-                                src={twitterIcon}
-                                alt="Picture of the author"
-                                width={70}
-                                height={70}
-                                className="rounded-full mix-blend-screen"
-                            ></Image>
-                        </a>
-                    </div>
-                    <div className="flex flex-col w-full">
+                    {/* Giant name */}
+                    <h1
+                        className="font-bold text-white uppercase w-full"
+                        style={{
+                            fontSize: 'clamp(3rem, 9.2vw, 11rem)',
+                            lineHeight: '0.86',
+                            letterSpacing: '-4px',
+                            marginTop: '24px',
+                        }}
+                    >
+                        <div style={{ overflow: 'hidden' }}>
+                            <div className="reveal-item" style={{ animationDelay: '0.15s' }}>Mudassir</div>
+                        </div>
+                        <div style={{ overflow: 'hidden' }}>
+                            <div className="reveal-item" style={{ animationDelay: '0.28s' }}>
+                                Khan<span className="text-primary">.</span>
+                            </div>
+                        </div>
+                    </h1>
 
-                        <h1
-                            className="text-3xl text-teal-300 text-start whitespace-nowrap font-jost md:text-4xl lg:text-6xl xl:text-8xl lg:block"
-                        >
-                            <span className="outline-text" style={{ whiteSpace: "nowrap" }}>
-                                Hello! I&apos;m
-                            </span>{" "}
-                            Mudassir Khan
-                        </h1>
-                        <p className="mt-3 mb-8 text-xl text-center md:text-4xl "> a
-                            <span className=' text-primary'> Frontend Developer </span>
-                            building scalable solutions
-                            <br />
-                        </p>
+                    {/* Bottom row: subtitle + stats */}
+                    <div className="mt-10 flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+                        <div>
+                            <div style={{ overflow: 'hidden', marginBottom: '28px' }}>
+                                <p className="leading-relaxed max-w-md reveal-item"
+                                    style={{ fontSize: '16px', color: '#e8eaf0', animationDelay: '0.42s' }}>
+                                    Frontend Developer building fast, scalable web
+                                    applications with Angular, React &amp; Next.js.
+                                </p>
+                            </div>
+                            <div style={{ overflow: 'hidden' }}>
+                                <div className="flex items-center gap-4 flex-wrap reveal-item" style={{ animationDelay: '0.54s' }}>
+                                    <Link
+                                        to="projects"
+                                        smooth offset={-70} duration={600}
+                                        className="cursor-pointer bg-primary text-[#06120c] font-semibold hover:bg-primary/80 transition-colors"
+                                        style={{ borderRadius: '11px', padding: '14px 24px', fontSize: '15px' }}
+                                    >
+                                        View my work →
+                                    </Link>
+                                    <Link
+                                        to="contact"
+                                        smooth offset={-70} duration={600}
+                                        className="cursor-pointer border border-zinc-700 text-white font-semibold hover:border-zinc-400 transition-colors"
+                                        style={{ borderRadius: '11px', padding: '14px 24px', fontSize: '15px' }}
+                                    >
+                                        Get in touch
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Stats */}
+                        <div className="flex gap-10 lg:gap-14 pb-1">
+                            {stats.map(({ value, label }, i) => (
+                                <div key={label} style={{ overflow: 'hidden' }}>
+                                    <div className="reveal-item" style={{ animationDelay: `${0.64 + i * 0.08}s` }}>
+                                        <div className="font-bold text-primary leading-none" style={{ fontSize: '30px' }}>{value}</div>
+                                        <div className="mt-2 font-mono uppercase" style={{ fontSize: '14px', color: '#9aa0b4' }}>{label}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
         </ElementWrapper>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

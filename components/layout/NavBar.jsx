@@ -1,107 +1,145 @@
 "use client"
-import { useEffect, useState } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import NextLink from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { RiMenuFoldLine } from 'react-icons/ri';
 import { GiCrossedBones } from 'react-icons/gi';
+
+const navConfig = [
+    { label: 'Home',     scrollTo: 'hero',     href: '/' },
+    { label: 'About',    scrollTo: 'about',    href: '/#about' },
+    { label: 'Projects', scrollTo: 'projects', href: '/projects' },
+    { label: 'Contact',  scrollTo: 'contact',  href: '/#contact' },
+];
+
+const linkStyle = { fontSize: '14px', color: 'rgb(154,160,180)', padding: '9px 14px', borderRadius: '8px' };
+
 const NavBar = () => {
-    const [showMediaIcons, setShowMediaIcons] = useState(true);
-    const [navHidden, setNavHidden] = useState(false)
-    const { scrollY } = useScroll()
-    useMotionValueEvent(scrollY, "change",
-        (latest) => {
-            const prvious = scrollY.getPrevious()
-            if (prvious > latest) {
-                setNavHidden(false)
-            }
-            else {
-                setNavHidden(true)
-            }
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [navHidden, setNavHidden] = useState(false);
+    const pathname = usePathname();
+    const isMain = pathname === '/';
+    const { scrollY } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        setNavHidden(scrollY.getPrevious() < latest);
+    });
+
+    const handleLinkClick = () => setShowMobileMenu(false);
+
+    const NavItem = ({ item, mobile = false }) => {
+        if (mobile) {
+            const cls = "text-2xl cursor-pointer text-zinc-300 hover:text-white transition-colors duration-200";
+            return isMain
+                ? <ScrollLink to={item.scrollTo} smooth offset={-70} duration={500} onClick={handleLinkClick} className={cls}>{item.label}</ScrollLink>
+                : <NextLink href={item.href} onClick={handleLinkClick} className={cls}>{item.label}</NextLink>;
         }
-    )
-    const handleToggle = () => {
-        setShowMediaIcons(!showMediaIcons)
-    }
-    const handleLinkClick = () => {
-        setShowMediaIcons(true)
+
+        const cls = "cursor-pointer hover:text-white transition-colors duration-200";
+        return isMain
+            ? <ScrollLink to={item.scrollTo} smooth offset={-70} duration={500} onClick={handleLinkClick} className={cls} style={linkStyle}>{item.label}</ScrollLink>
+            : <NextLink href={item.href} onClick={handleLinkClick} className={cls} style={linkStyle}>{item.label}</NextLink>;
     };
 
+    const Logo = () => {
+        const inner = (
+            <>
+                {/* Outlined MK box — transparent bg, teal border + text */}
+                <span style={{
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    width: '38px', height: '38px',
+                    border: '1px solid rgb(62,232,164)',
+                    borderRadius: '10px',
+                    color: 'rgb(62,232,164)',
+                    fontSize: '13px',
+                    fontWeight: '600',
+                    flexShrink: 0,
+                }}>MK</span>
+                <span className="text-white font-semibold text-sm">Mudassir Khan</span>
+            </>
+        );
+        return isMain
+            ? <ScrollLink to="hero" smooth offset={-70} duration={500} className="flex items-center gap-2.5 cursor-pointer select-none">{inner}</ScrollLink>
+            : <NextLink href="/" className="flex items-center gap-2.5 select-none">{inner}</NextLink>;
+    };
 
     return (
-        <motion.header
-            variants={{
-                visible: { y: 0 },
-                hidden: { y: "-105%" }
+        <>
+            <motion.header
+                variants={{ visible: { y: 0 }, hidden: { y: '-105%' } }}
+                animate={navHidden ? 'hidden' : 'visible'}
+                transition={{ duration: 0.35, ease: 'easeInOut' }}
+                style={{ background: 'rgba(10,11,18,0.72)' }}
+                className="fixed top-0 left-0 z-20 w-full border-b border-white/5 backdrop-blur-md"
+            >
+                <nav className="flex items-center justify-between w-full px-7 py-[14px]">
+                    <Logo />
 
-            }}
-            animate={navHidden ? "hidden" : "visible"}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed top-0 left-0 z-20 w-full "  >
-            <nav className="flex items-center justify-between w-full max-w-6xl mx-auto shadow-2xl select-none outline-dashed outline-2 outline-secondary bg-[#020024] ">
-                <div className='p-2 ml-2 text-2xl cursor-pointer font-Caveat lg:ml-4 '>
-                    <Link
-                        to="hero"
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                    ><span className=' text-primary'>Mudassir</span>
-                        <span className='ml-2 font-bold text-red-500'>Khan</span>
+                    {/* Desktop — all items grouped right, no active highlighting */}
+                    <div className="hidden lg:flex items-center">
+                        {navConfig.map((item) => (
+                            <NavItem key={item.label} item={item} />
+                        ))}
+                        <a
+                            href="https://www.linkedin.com/in/mudassir-khan-522303233/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-2 font-semibold hover:opacity-80 transition-opacity"
+                            style={{ background: 'rgb(62,232,164)', borderRadius: '9px', padding: '9px 16px', fontSize: '14px', color: '#06120c' }}
+                        >
+                            Résumé
+                        </a>
+                    </div>
 
-                    </Link>
+                    {/* Mobile hamburger */}
+                    <button
+                        className="block lg:hidden text-white cursor-pointer p-1"
+                        onClick={() => setShowMobileMenu(true)}
+                        aria-label="Open menu"
+                    >
+                        <RiMenuFoldLine className="text-2xl" />
+                    </button>
+                </nav>
+            </motion.header>
+
+            {/* Mobile overlay — sibling of motion.header to escape stacking context */}
+            {showMobileMenu && (
+                <div
+                    className="fixed inset-0 flex flex-col items-center justify-center z-[200] lg:hidden backdrop-blur-md"
+                    style={{ background: 'rgba(10,11,18,0.97)' }}
+                >
+                    <button
+                        className="absolute top-5 right-6 text-white cursor-pointer p-1"
+                        onClick={() => setShowMobileMenu(false)}
+                        aria-label="Close menu"
+                    >
+                        <GiCrossedBones className="text-2xl" />
+                    </button>
+                    <ul className="flex flex-col items-center gap-8">
+                        {navConfig.map((item) => (
+                            <li key={item.label}>
+                                <NavItem item={item} mobile />
+                            </li>
+                        ))}
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/mudassir-khan-522303233/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setShowMobileMenu(false)}
+                                className="font-semibold"
+                                style={{ background: 'rgb(62,232,164)', borderRadius: '9px', padding: '11px 24px', fontSize: '15px', color: '#06120c' }}
+                            >
+                                Résumé
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                {
-                    showMediaIcons ? <RiMenuFoldLine className='absolute block text-2xl lg:hidden right-4' onClick={handleToggle} /> : " "
-                }
-                <ul className={` md:space-x-7  text-2xl lg:mr-2 md:text-xl backdrop-blur-lg lg:opacity-100 lg:bg-transparent flex flex-col lg:items-center  text-cyan-500 font-bold justify-center gap-5 absolute  lg:relative  lg:flex lg:p-4 lg:my-4 lg:rounded-md top-0 right-0 w-9/12 h-screen  z-50  text-center lg:flex-row lg:h-fit lg:w-1/2  shadow-2xl outline-dashed outline-2  outline-secondary lg:backdrop-blur-none ${showMediaIcons ? "hidden" : "block"}`} >
-                    <GiCrossedBones className='absolute block top-4 right-4 Cross lg:hidden' onClick={() => handleToggle()} />
-                    <li className='transition duration-500 ease-in-out cursor-pointer hover:text-primary '>
-                        <Link
-                            to="hero"
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={handleLinkClick}
-                        >
-                            <span className='transition duration-500 ease-in-out hover:text-red-500'>Ho</span><span className='transition duration-500 ease-in-out hover:text-red-500'>me</span>
-                        </Link>
-                    </li>
-                    <li className='transition duration-500 ease-in-out cursor-pointer hover:text-primary'>
-                        <Link
-                            to="about"
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={handleLinkClick}
-                        >
-                            <span className='transition duration-500 ease-in-out hover:text-red-500'>Ab</span><span className='transition duration-500 ease-in-out hover:text-red-500'>out</span>
-                        </Link>
-                    </li>
-                    <li className='transition duration-500 ease-in-out cursor-pointer hover:text-primary'>
-                        <Link
-                            to="projects"
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={handleLinkClick}
-                        >
-                            <span className='transition duration-500 ease-in-out hover:text-red-500'>Pro</span><span className='transition duration-500 ease-in-out hover:text-red-500'>jects</span>
-                        </Link>
-                    </li>
-                    <li className='transition duration-500 ease-in-out cursor-pointer hover:text-primary'>
-                        <Link
-                            to="contact"
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={handleLinkClick}
-                        >
-                            <span className='transition duration-500 ease-in-out hover:text-red-500'>Con</span><span className='transition duration-500 ease-in-out hover:text-red-500'>tacts</span>
-                        </Link>
-                    </li>
+            )}
+        </>
+    );
+};
 
-                </ul>
-            </nav>
-        </motion.header>
-    )
-}
-export default NavBar
+export default NavBar;

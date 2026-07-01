@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Space+Grotesk&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,16 +9,28 @@
 }
 
 body {
-  background: rgb(2, 0, 36);
+  background: #0b0b14;
   cursor: none;
 }
 
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(28px); }
+}
 
+@keyframes slideUp {
+  from {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 
-.dottedBackground {
-  background-image: radial-gradient(circle, rgb(0 96 56 / 20%) 1px, transparent 2px);
-  background-size: 40px 40px;
-  min-height: 100vh;
+.reveal-item {
+  animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 

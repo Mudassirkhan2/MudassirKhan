@@ -1,61 +1,61 @@
 "use client"
 import Link from 'next/link';
 import HomeFinderGif from '../../public/assets/homefinder.png';
-import bugbounty from '../../public/assets/bugbounty.png';
 import tabstacker from '../../public/assets/tabstacker.png';
-import AnimateLetters from '../common/AnimateLetters';
+import ziyafat from '../../public/assets/ziyafat.png';
 import { ElementWrapper } from '../clients/client';
 import ProjectCard from '../clients/ProjectCard';
 
 const Projects = () => {
+    return (
+        <ElementWrapper nameOfTheElement='projects'>
+            <section className='relative max-w-6xl px-4 mx-auto py-20'>
+                <p className="text-primary font-mono text-sm tracking-widest mb-3">// selected work</p>
+                <h2 className='text-4xl lg:text-5xl font-bold text-white mb-16'>Featured projects</h2>
 
-  return (
-    <ElementWrapper nameOfTheElement='projects'>
-      <section className='relative max-w-6xl p-2 mx-auto mt-10 rounded-lg md:p-4'>
-        <div className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-5xl xl:text-6xl'>My Featured Projects</div>
-        <span className="absolute h-16 top-4 w-2/3 rounded-lg left-1/2 -translate-x-1/2  bg-[#0038d666] blur-3xl z-0"></span>
-        <div className='flex flex-col gap-12 xl:gap-16'>
-          <ProjectCard
-            imageSrc={tabstacker}
-            title='TabStacker 📑'
-            indexValue={0}
-            description='A tab management extension. Built using '
-            techStack={['React.js', 'Tailwind CSS', 'Chrome Extension API']}
-            features=' Offers a comprehensive solution for organizing and optimizing browsing sessions leading to a more streamlined workflow and improved productivity. Login using Google Gmail account. Responsive design. '
-            collobratedWith={true}
-            projectPortfolio='https://www.joincolab.io/product/tabstacker'
-            liveLink='https://tabstacker.vercel.app/'
-            githubLink='https://github.com/Mudassirkhan2/tabstacker-frontend'
-          />
-          <ProjectCard
-            imageSrc={HomeFinderGif}
-            title='Home Finder 🏠'
-            indexValue={1}
-            description='A website that allows property owners to effortlessly list their houses for rent or sale. The platform offers comprehensive property details, high-resolution image uploads, and a responsive design. Built using '
-            techStack={['React.js', 'Tailwind CSS', 'Firebase', 'Framer Motion']}
-            features=' it offers features such as comprehensive property details, high-resolution image uploads, responsive design.'
-            liveLink='https://home-finder-khan.vercel.app/'
-            githubLink='https://github.com/Mudassirkhan2/HomeFinder'
-          />
-          <ProjectCard
-            imageSrc={bugbounty}
-            title='Bug Bounty Brigade 🛡️'
-            indexValue={1}
-            description='Developed a website for the cybersecurity community, aimed at providing a valuable online resource for enthusiasts, professionals, and anyone interested in the field. This project involved the use of modern web technologies, including  '
-            techStack={['Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn']}
-            features=' it offers features where  Users can find information about upcoming cybersecurity events, workshops, and webinars. '
-            liveLink='https://www.bugbountybrigade.tech/'
-            githubLink='https://github.com/Mudassirkhan2/bug-bounty-brigade-website'
-          />
-          <Link href='/projects' className="inline-flex mx-auto h-12 w-fit animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#B799FF] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ">
-            View More Projects
-          </Link>
-        </div>
+                <div className='flex flex-col gap-20 lg:gap-28'>
+                    <ProjectCard
+                        imageSrc={ziyafat}
+                        title='Ziyafat'
+                        indexValue={0}
+                        description='An ERP built for catering businesses — managing the full lifecycle from lead capture to invoice, including bookings, dish catalogs, menu building, quotations, and a public-facing storefront.'
+                        techStack={['Next.js 15', 'TypeScript', 'FastAPI', 'MongoDB', 'shadcn/ui', 'Tailwind CSS']}
+                        liveLink='https://getziyafat.vercel.app'
+                        githubLink='https://github.com/Mudassirkhan2/Ziyafat'
+                    />
+                    <ProjectCard
+                        imageSrc={HomeFinderGif}
+                        title='Home Finder'
+                        indexValue={1}
+                        description='A platform that lets property owners list their homes for rent or sale, with comprehensive property details, high-resolution image uploads, and a fully responsive design.'
+                        techStack={['React.js', 'Tailwind CSS', 'MongoDB', 'Framer Motion']}
+                        liveLink='https://homefinder-khan.vercel.app/'
+                        githubLink='https://github.com/Mudassirkhan2/HomeFinder'
+                    />
+                    <ProjectCard
+                        imageSrc={tabstacker}
+                        title='TabStacker'
+                        indexValue={2}
+                        description='A Chrome extension for organizing and optimizing browsing sessions — leading to a more streamlined workflow and improved productivity. Built with a cross-functional team of a PM, a designer and a developer.'
+                        techStack={['React.js', 'Tailwind CSS', 'Chrome Extension API']}
+                        collobratedWith={true}
+                        projectPortfolio='https://www.joincolab.io/product/tabstacker'
+                        liveLink='https://tabstacker.vercel.app/'
+                        githubLink='https://github.com/Mudassirkhan2/tabstacker-frontend'
+                    />
+                </div>
 
-      </section>
-    </ElementWrapper>
-  );
+                <div className="mt-16 pt-10 border-t border-white/5 text-center">
+                    <Link
+                        href='/projects'
+                        className="inline-flex items-center gap-2 text-zinc-400 hover:text-white text-sm transition-colors duration-200"
+                    >
+                        View all projects→
+                    </Link>
+                </div>
+            </section>
+        </ElementWrapper>
+    );
 };
 
 export default Projects;
-

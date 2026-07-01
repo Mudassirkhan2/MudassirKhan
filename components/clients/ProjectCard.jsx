@@ -1,66 +1,106 @@
+"use client"
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import React from 'react';
 
-const ProjectCard = ({ imageSrc, title, description, techStack, features, liveLink, githubLink, projectPortfolio, collobratedWith }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-  const animationVariants1 = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -100 },
-  };
-  const animationVariants2 = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: 100 },
-  };
+const ProjectCard = ({
+    imageSrc,
+    title,
+    description,
+    techStack,
+    liveLink,
+    githubLink,
+    projectPortfolio,
+    collobratedWith,
+    indexValue,
+}) => {
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+    const isEven = indexValue % 2 !== 0;
+    const num = String(indexValue + 1).padStart(2, '0');
 
-  return (
-    <div className='flex flex-col'>
-      <div className='flex flex-col' ref={ref}>
+    return (
         <motion.div
-          animate={inView ? 'visible' : 'hidden'}
-          variants={animationVariants1}
-          transition={{ duration: 0.8 }}
+            ref={ref}
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-12 items-start`}
         >
-          <Image src={imageSrc} width={800} height="auto"
-            loading="lazy"
-            alt='project' className='h-auto mx-auto shadow-2xl md:mx-0 outline-dashed outline-1 outline-primary' />
+            {/* Project image */}
+            <div className="w-full lg:w-[55%] shrink-0">
+                <div className="overflow-hidden rounded-xl border border-white/5 bg-white/[0.02]">
+                    <Image
+                        src={imageSrc}
+                        width={800}
+                        height={500}
+                        alt={title}
+                        loading="lazy"
+                        className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+                    />
+                </div>
+            </div>
+
+            {/* Project info */}
+            <div className="lg:w-[45%] flex flex-col justify-center pt-2">
+                <span className="text-zinc-600 font-mono text-sm mb-3">{num}</span>
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">{title}</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-5">
+                    {description}
+                    {collobratedWith && (
+                        <span className="block mt-2 text-zinc-500">
+                            Collaborated with a cross-functional team of a PM, a designer, and a developer.
+                        </span>
+                    )}
+                    {projectPortfolio && (
+                        <a
+                            href={projectPortfolio}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block mt-2 text-primary hover:underline text-sm"
+                        >
+                            View TabStacker portfolio →
+                        </a>
+                    )}
+                </p>
+
+                {/* Tech pills */}
+                <div className="flex flex-wrap gap-2 mb-7">
+                    {techStack.map((tech) => (
+                        <span
+                            key={tech}
+                            className="px-3 py-1 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 text-xs"
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+
+                {/* Action buttons */}
+                <div className="flex items-center gap-3">
+                    {liveLink && (
+                        <a
+                            href={liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-5 py-2.5 bg-primary text-black text-sm font-semibold rounded-md hover:bg-primary/80 transition-colors"
+                        >
+                            View website
+                        </a>
+                    )}
+                    {githubLink && (
+                        <a
+                            href={githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-5 py-2.5 border border-zinc-700 text-white text-sm font-semibold rounded-md hover:border-zinc-500 transition-colors"
+                        >
+                            GitHub
+                        </a>
+                    )}
+                </div>
+            </div>
         </motion.div>
-        <motion.div className='self-end mt-3 md:w-3/4' animate={inView ? 'visible' : 'hidden'}
-          variants={animationVariants2}
-          transition={{ duration: 0.8, delay: 1 }}>
-          <h3 className='mt-2 mb-3 text-3xl font-bold text-center text-teal-500 md:text-left md:text-5xl font-Caveat'>{title}</h3>
-          <p className='self-end mb-3 text-lg select-none font-SpaceGrotesk'>
-            {description}
-            {techStack.map((tech, i) => (
-              <span key={i} className={`text-2xl font-bold tracking-widest ${i % 3 === 0 ? 'text-pink-500' : i % 3 === 1 ? 'text-yellow-500' : 'text-[#B799FF]'} font-sans`}>
-                {tech} {i !== techStack.length - 1 && ', '}
-              </span>
-            ))}
-            ,{features}
-            {
-              collobratedWith && (
-                <span className='text-lg font-bold text-yellow-100'>Collaborated with a cross-functional team consisting of a Product Manager, a Designer, and a Developer.</span>
-              )
-            }
-            {projectPortfolio && (
-              <a href={projectPortfolio} target='_blank' rel='noopener noreferrer' className='text-lg '> View our <span className='underline text-primary'>Tabstacker Portfolio</span>.</a>
-            )}
-          </p>
-          {liveLink && (
-            <a href={liveLink} target='_blank' rel='noopener noreferrer' className='px-4 py-2 text-lg font-bold text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-SpaceGrotesk'>{`View Website`}
-            </a>
-          )}
-          {githubLink && (
-            <a href={githubLink} target='_blank' rel='noopener noreferrer' className='px-4 py-2 ml-2 text-lg font-bold text-white bg-gray-800 rounded hover:bg-gray-900 focus:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2'>{`GitHub`}</a>
-          )}
-        </motion.div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default ProjectCard;

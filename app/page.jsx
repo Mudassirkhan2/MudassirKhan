@@ -9,7 +9,7 @@ import Cursor from "@/components/common/Cursor";
 export default function Home() {
 
   return (
-    <main className="relative min-h-screen mx-auto text-white main img dottedBackground">
+    <main className="relative min-h-screen mx-auto text-white">
       <div>
         <NavBar />
         <Hero />

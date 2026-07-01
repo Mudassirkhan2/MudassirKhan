@@ -1,207 +1,129 @@
-"use client";
 import Image from 'next/image'
-import React from 'react'
-import FramerIcon from '../../public/assets/framer.png';
-import { ElementWrapper } from '../clients/client';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import FramerIcon from '../../public/assets/framer.png'
+import { ElementWrapper } from '../clients/client'
+
+const ICON_SIZE = { width: 40, height: 40 }
+
+const TechCard = ({ src, alt, label, localSrc }) => (
+    <div className="flex flex-col items-center justify-center gap-2 p-3 rounded-xl border border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-200 w-[88px] h-[88px]">
+        {localSrc ? (
+            <Image src={localSrc} alt={alt} {...ICON_SIZE} className="w-9 h-9 object-contain" />
+        ) : (
+            <Image src={src} alt={alt} {...ICON_SIZE} className="w-9 h-9 object-contain" />
+        )}
+        <span className="text-zinc-400 text-[10px] text-center leading-tight">{label}</span>
+    </div>
+)
+
+const frameworks = [
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg", alt: "Angular", label: "Angular" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg", alt: "Angular Material", label: "Ang. Material" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", alt: "React", label: "React" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", alt: "Next.js", label: "Next.js" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg", alt: "Ionic", label: "Ionic" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", alt: "Tailwind CSS", label: "Tailwind CSS" },
+    { localSrc: FramerIcon, alt: "Framer Motion", label: "Framer Motion" },
+]
+
+const languages = [
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", alt: "TypeScript", label: "TypeScript" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "JavaScript", label: "JavaScript" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", alt: "Python", label: "Python" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", alt: "HTML5", label: "HTML5" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", alt: "CSS3", label: "CSS3" },
+]
+
+const tools = [
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg", alt: "FastAPI", label: "FastAPI" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg", alt: "MongoDB", label: "MongoDB" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git", label: "Git" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", alt: "GitHub", label: "GitHub" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", alt: "Figma", label: "Figma" },
+]
+
+const statsCard = [
+    { label: 'ROLE', value: 'Frontend Developer' },
+    { label: 'FOCUS', value: 'Angular · React · Next.js' },
+    { label: 'OPEN SOURCE', value: 'Active contributor' },
+]
 
 const About = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3
-  });
+    return (
+        <ElementWrapper nameOfTheElement="about">
+            <section className="relative max-w-6xl px-4 mx-auto py-20">
+                <p className="text-primary font-mono text-sm tracking-widest mb-3">// about</p>
+                <h2 className="text-4xl lg:text-5xl font-bold text-white mb-12">Something about me</h2>
 
-  return (
-    <ElementWrapper nameOfTheElement="about">
-      <section className="relative max-w-6xl p-2 mx-auto rounded-lg shadow-2xl outline-dashed outline-1 outline-secondary"
-      >
-        <div className='my-10 font-mono text-3xl font-bold text-center select-none lg:text-5xl xl:text-6xl'> Something About ME</div>
-        <span className="absolute h-16 top-4 w-2/3 rounded-lg left-1/2 -translate-x-1/2  bg-[#0038d666] blur-3xl z-0"></span>
+                <div className="flex flex-col lg:flex-row gap-10 mb-20">
+                    {/* Bio text */}
+                    <div className="lg:w-[58%] space-y-4 text-zinc-300 text-base leading-relaxed">
+                        <p>
+                            Hi, I&apos;m Mudassir — a front-end developer working professionally with{' '}
+                            <strong className="text-white">Angular</strong>, with hands-on experience building
+                            scalable web applications.
+                        </p>
+                        <p>
+                            My expertise spans modern front-end technologies including Angular, FastAPI, Ionic,
+                            Next.js and React, with a strong focus on reactive programming and component-based
+                            architecture. Beyond client work, I actively contribute to open-source projects and
+                            collaborate with cross-functional teams to solve complex problems through innovative
+                            technical solutions.
+                        </p>
+                    </div>
 
-        <motion.div
-          ref={ref}
-          initial={{ filter: 'blur(5px)' }}
-          animate={{ filter: inView ? 'blur(0px)' : 'blur(5px)' }}
-          transition={{ duration: 0.5 }}
-          className='flex flex-col mt-10 select-none gap-x-10 gap-y-10 md:flex-row xl:gap-x-16 outline-dashed outline-1 outline-secondary'
-        >
-          <div className='flex flex-col p-2 mb-4 md:w-1/2 outline-dashed outline-1 outline-secondary'>
-            <h2 className='mb-6 text-3xl md:text-4xl'>Hi 👋 I&apos;m  <span className='text-primary '>Mudassir</span>  ,</h2>
-            <div className='space-y-3'>
-              <p className='font-mono text-base md:text-xl'>I'm a front-end developer working professionally with Angular, with hands-on experience building scalable web applications.
-              </p>
-              <p className='font-mono text-base md:text-xl'>  My expertise spans modern front-end technologies including Angular, FastAPI,Ionic, Next.js and React, with a strong focus on reactive programming and component-based architecture. Beyond client work, I actively contribute to open-source projects and collaborate with cross-functional teams to solve complex problems through innovative technical solutions. I continuously expand my skills in  performance optimization, and modern web development practices.
-              </p>
-            </div>
-          </div>
-          <div className='p-2 mb-4 select-none md:w-1/2 outline-dashed outline-1 outline-secondary'>
-            <h2 className='mb-6 text-4xl text-center text-primary' >Tools and Languages <span className='text-center text-white'>I Command </span> </h2>
-            <ul className='flex flex-wrap justify-center gap-12 mb-2 md:gap-7'>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-                  alt="angular"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Angular</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg"
-                  alt="Material"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 "> Angular Material</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
-                  alt="fastapi"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 "> FastAPI</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                  alt="Nextjs"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Next js</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="react js"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">React JS</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="react js"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">TypeScript</div>
-              </li>
+                    {/* Stats card */}
+                    <div className="lg:w-[42%]">
+                        <div className="border border-white/8 rounded-xl overflow-hidden bg-white/[0.02]">
+                            {statsCard.map(({ label, value }) => (
+                                <div
+                                    key={label}
+                                    className="flex justify-between items-center px-5 py-4 border-b border-white/5"
+                                >
+                                    <span className="text-zinc-500 text-xs tracking-widest font-mono">{label}</span>
+                                    <span className="text-white text-sm">{value}</span>
+                                </div>
+                            ))}
+                            <div className="flex justify-between items-center px-5 py-4">
+                                <span className="text-zinc-500 text-xs tracking-widest font-mono">STATUS</span>
+                                <span className="text-primary text-sm flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                                    Open to work
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="tailwind css"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Tailwind CSS</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg"
-                  alt="ionic"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Ionic</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg"
-                  alt="tailwind css"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">mongodb</div>
-              </li>
+                {/* Tech section */}
+                <h3 className="text-white text-lg font-semibold mb-8">Tools &amp; languages I command</h3>
 
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">JavaScript</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="JavaScript"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">CSS</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="JavaScript"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">HTML</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Python"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Python</div>
-              </li>
-
-
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src={FramerIcon}
-                  alt="Framer motion"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Framer motion</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                  alt="Figma"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Figma</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  alt="Git"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Git</div>
-              </li>
-              <li className='group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl text-sm lg:text-base'>
-                <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                  alt="Github"
-                  width={70}
-                  height={70}
-                  className='w-10 h-10 lg:w-16 lg:h-16'
-                />
-                <div className="absolute px-2 py-1 overflow-hidden font-bold transition-all duration-300 rounded-lg top-[85%] whitespace-nowrap bg-primary group-hover:scale-100 group-hover:opacity-100 ">Github</div>
-              </li>
-
-            </ul>
-          </div>
-        </motion.div>
-      </section>
-    </ElementWrapper>
-  )
+                <div className="space-y-8">
+                    <div>
+                        <p className="text-zinc-600 text-xs tracking-[0.2em] uppercase font-mono mb-4">
+                            Frameworks &amp; Libraries
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            {frameworks.map((item) => <TechCard key={item.label} {...item} />)}
+                        </div>
+                    </div>
+                    <div>
+                        <p className="text-zinc-600 text-xs tracking-[0.2em] uppercase font-mono mb-4">Languages</p>
+                        <div className="flex flex-wrap gap-3">
+                            {languages.map((item) => <TechCard key={item.label} {...item} />)}
+                        </div>
+                    </div>
+                    <div>
+                        <p className="text-zinc-600 text-xs tracking-[0.2em] uppercase font-mono mb-4">
+                            Tools &amp; Platforms
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            {tools.map((item) => <TechCard key={item.label} {...item} />)}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </ElementWrapper>
+    )
 }
 
 export default About
