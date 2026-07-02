@@ -11,7 +11,7 @@ const ProjectCard = ({
     liveLink,
     githubLink,
     projectPortfolio,
-    collobratedWith,
+    collaboratedWith,
     indexValue,
 }) => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -46,7 +46,7 @@ const ProjectCard = ({
                 <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">{title}</h3>
                 <p className="text-zinc-400 text-sm leading-relaxed mb-5">
                     {description}
-                    {collobratedWith && (
+                    {collaboratedWith && (
                         <span className="block mt-2 text-zinc-500">
                             Collaborated with a cross-functional team of a PM, a designer, and a developer.
                         </span>

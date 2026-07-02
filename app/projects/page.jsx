@@ -1,15 +1,15 @@
 export const metadata = {
     title: 'Projects',
-    description: 'Browse all 55+ projects by Mudassir Khan — ERP systems, dashboards, Chrome extensions, and open-source work built with React, Next.js, Angular, FastAPI, and more.',
+    description: 'Browse all 10+ projects by Mudassir Khan — ERP systems, dashboards, Chrome extensions, and open-source work built with React, Next.js, Angular, FastAPI, and more.',
     alternates: { canonical: 'https://mudassir-khan.vercel.app/projects' },
     openGraph: {
         title: 'Projects — Mudassir Khan',
-        description: 'Browse all 55+ projects by Mudassir Khan — ERP systems, dashboards, Chrome extensions built with React, Next.js, Angular, FastAPI, and more.',
+        description: 'Browse all 10+ projects by Mudassir Khan — ERP systems, dashboards, Chrome extensions built with React, Next.js, Angular, FastAPI, and more.',
         url: 'https://mudassir-khan.vercel.app/projects',
     },
     twitter: {
         title: 'Projects — Mudassir Khan',
-        description: 'Browse all 55+ projects by Mudassir Khan.',
+        description: 'Browse all 10+ projects by Mudassir Khan.',
     },
 }
 

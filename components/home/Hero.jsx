@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { ElementWrapper } from '../clients/client';
 
 const stats = [
-    { value: '2.5', label: 'Years' },
+    { value: '2.5+', label: 'Years' },
     { value: '10+', label: 'Projects' },
     { value: '15+', label: 'Technologies' },
 ];

@@ -36,9 +36,9 @@ const Projects = () => {
                         imageSrc={tabstacker}
                         title='TabStacker'
                         indexValue={2}
-                        description='A Chrome extension for organizing and optimizing browsing sessions — leading to a more streamlined workflow and improved productivity. Built with a cross-functional team of a PM, a designer and a developer.'
+                        description='A Chrome extension for organizing and optimizing browsing sessions — leading to a more streamlined workflow and improved productivity.'
                         techStack={['React.js', 'Tailwind CSS', 'Chrome Extension API']}
-                        collobratedWith={true}
+                        collaboratedWith={true}
                         projectPortfolio='https://www.joincolab.io/product/tabstacker'
                         liveLink='https://tabstacker.vercel.app/'
                         githubLink='https://github.com/Mudassirkhan2/tabstacker-frontend'
@@ -50,7 +50,7 @@ const Projects = () => {
                         href='/projects'
                         className="inline-flex items-center gap-2 text-zinc-400 hover:text-white text-sm transition-colors duration-200"
                     >
-                        View all projects→
+                        View all projects →
                     </Link>
                 </div>
             </section>
