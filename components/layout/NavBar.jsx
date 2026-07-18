@@ -83,7 +83,7 @@ const NavBar = () => {
                             <NavItem key={item.label} item={item} />
                         ))}
                         <a
-                            href="https://www.linkedin.com/in/mudassir-khan-522303233/"
+                            href="https://drive.google.com/file/d/1FGonMPiughCN_vwx43_lhUneF3hkYuk-/view"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="ml-2 font-semibold hover:opacity-80 transition-opacity"
@@ -125,7 +125,7 @@ const NavBar = () => {
                         ))}
                         <li>
                             <a
-                                href="https://www.linkedin.com/in/mudassir-khan-522303233/"
+                                href="https://drive.google.com/file/d/1FGonMPiughCN_vwx43_lhUneF3hkYuk-/view"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setShowMobileMenu(false)}
